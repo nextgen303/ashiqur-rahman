@@ -7,6 +7,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
 import Project from "./pages/Project";
+import Login from "./pages/Login"; // Import the Login page
 
 const App = () => {
   return (
@@ -16,9 +17,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
-        <Route path="/project/:id" element={<ProjectDetails />} />{" "}
+        <Route path="/project/:id" element={<ProjectDetails />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/login" element={<Login />} /> {/* Add this route for the login page */}
       </Routes>
     </Router>
   );
