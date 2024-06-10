@@ -2,43 +2,15 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const BlogSlider = ({ blogs }) => {
-  const CustomPrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} custom-arrow custom-arrow-prev`}
-        style={{ ...style, display: "block", right: "30px" }}
-        onClick={onClick}
-      >
-        <FaArrowLeft className="text-3xl text-gray-800" />
-      </div>
-    );
-  };
-
-  const CustomNextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} custom-arrow custom-arrow-next`}
-        style={{ ...style, display: "block", right: "30px" }}
-        onClick={onClick}
-      >
-        <FaArrowRight className="text-3xl text-gray-800" />
-      </div>
-    );
-  };
-
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1024,

@@ -65,6 +65,17 @@ const About = () => {
               coding personal projects, etc.
             </p>
           </section>
+
+          <section className="my-8">
+          <h2 className="text-3xl font-bold mb-4">Skills</h2>
+          <ul className="list-disc list-inside text-gray-600">
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>React.js, Next.js</li>
+            <li>Tailwind CSS, Bootstrap</li>
+            <li>Git, GitHub</li>
+            <li>Responsive Design</li>
+          </ul>
+        </section>
         </div>
       </div>
 
