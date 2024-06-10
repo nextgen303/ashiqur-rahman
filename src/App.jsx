@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/project/:id" element={<ProjectDetails />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
-        <Route path="/login" element={<Login />} /> {/* Add this route for the login page */}
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

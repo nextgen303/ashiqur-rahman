@@ -69,7 +69,7 @@ const BlogSlider = ({ blogs }) => {
               />
               <div className="p-4">
                 <h3 className="text-2xl font-bold mb-2">{blog.title}</h3>
-                <p className="text-gray-600 mb-4">{blog.description}</p>
+                <p className="text-gray-600 mb-4">{blog.excerpt}</p>
                 <a
                   href={`/blog/${blog.id}`}
                   className="text-blue-500 hover:text-blue-700"

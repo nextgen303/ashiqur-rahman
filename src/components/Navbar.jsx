@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav> 
+    <nav className="max-w-screen-xl mx-auto"> 
       <ul  className="flex items-center gap-10">
         <li>
           <Link to="/">Home</Link>

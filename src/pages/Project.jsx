@@ -7,14 +7,14 @@ const projects = [
   {
     id: 1,
     title: 'Project One',
-    image: '/path/to/image1.jpg',
+    image: 'https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg',
     description: 'This is a description for project one.',
     features: ['Feature 1', 'Feature 2', 'Feature 3']
   },
   {
     id: 2,
     title: 'Project Two',
-    image: '/path/to/image2.jpg',
+    image: 'https://i.pinimg.com/564x/1b/b3/02/1bb302a549e2b17feda3fc2f634920b5.jpg',
     description: 'This is a description for project two.',
     features: ['Feature A', 'Feature B', 'Feature C']
   }

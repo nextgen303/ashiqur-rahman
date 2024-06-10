@@ -8,13 +8,19 @@ const blogs = [
     id: 1,
     title: 'Blog Post One',
     excerpt: 'This is a short description for blog post one.',
-    image: '/path/to/image1.jpg'
+    image: 'https://i.pinimg.com/564x/bd/53/66/bd5366fc6adf20de0c45778e7218110b.jpg',
   },
   {
     id: 2,
     title: 'Blog Post Two',
-    excerpt: 'This is a short description for blog post two.',
-    image: '/path/to/image2.jpg'
+    excerpt: 'This is a short description for blog post one.',
+    image: 'https://i.pinimg.com/564x/92/db/4f/92db4f1026f395298352e299ce823484.jpg',
+  },
+  {
+    id: 3,
+    title: 'Blog Post Two',
+    excerpt: 'This is a short description for blog post one.',
+    image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
   }
   // Add more blogs as needed
 ];
