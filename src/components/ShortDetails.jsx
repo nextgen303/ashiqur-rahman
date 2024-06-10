@@ -48,7 +48,7 @@ const ShortDetails = () => {
         >
           <img
             className="w-full h-full object-cover"
-            src="https://scontent.fird6-1.fna.fbcdn.net/v/t39.30808-6/441063667_502038615479271_220397282156515065_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGw3A8NzhxdSOcUWn5PnCJMFxaNDw5lqdsXFo0PDmWp25EFLTjfQdDHHLKzWC9i6efRD7Sp2me_ElVuBqNbpRC1&_nc_ohc=QDszi35aSNkQ7kNvgEcfGnH&_nc_ht=scontent.fird6-1.fna&oh=00_AYDGTk_eWKXpDEFnPKN8DLPgT4t7yczvFh7oUonIT_wgSA&oe=666D4742"
+            src="https://scontent.fird6-1.fna.fbcdn.net/v/t39.30808-6/418816837_432172515799215_2459863824828881533_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGCAsEAmoPd-n7ywXu514O8NNTI1CFdfhk01MjUIV1-GZ8qNC8aZ4KK9wPIiN4tIqgXvTqDqA4qTgi49XjRxTvG&_nc_ohc=8MzeNrWBxQgQ7kNvgEtHtFM&_nc_ht=scontent.fird6-1.fna&oh=00_AYAHIFfhk5y7yt1QPOwWPLhYZypuaW0EWeXAtpPaghcQdQ&oe=666D406B"
             alt="AshiQur Rahman"
           />
         </motion.div>
