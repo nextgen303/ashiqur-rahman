@@ -8,6 +8,10 @@ body{
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .custom-arrow {
     position: absolute;
     top: 50%;

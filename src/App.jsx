@@ -9,6 +9,7 @@ import BlogDetails from "./pages/BlogDetails";
 import Project from "./pages/Project";
 import Login from "./pages/Login";
 import NotFoundPage from './pages/404';
+import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <CustomCursor />
     </Router>
   );
 };
