@@ -13,7 +13,7 @@ const Hero = () => {
 
       <div className="bottom_content flex items-end justify-between gap-12">
         <div className="left">
-          <div className="text-9xl font-bold flex items-center gap-4">
+          <div className="text-[9vw] leading-7 font-bold flex items-center gap-4">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "8.5vw" }}
@@ -27,9 +27,9 @@ const Hero = () => {
                 height="100%"
               />
             </motion.div>
-            <h1>WEB</h1>{" "}
+            <h1 >WEB</h1>{" "}
           </div>
-          <h1 className="text-9xl font-bold">DEVELOPER </h1>
+          <h1 className="text-[9vw] leading-[130px] font-bold">DEVELOPER </h1>
         </div>
 
         <div className="right w-[30%]">
