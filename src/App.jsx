@@ -13,6 +13,7 @@ import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   return (
+    <div className="select-none">
     <Router>
       <Navbar />
       <Routes>
@@ -27,6 +28,7 @@ const App = () => {
       </Routes>
       <CustomCursor />
     </Router>
+    </div>
   );
 };
 

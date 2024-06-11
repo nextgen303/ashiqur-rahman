@@ -40,7 +40,7 @@ const BlogDetails = () => {
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 max-w-screen-xl">
       <button
         onClick={() => navigate(-1)}
         className="flex items-center mb-4 text-blue-500 hover:text-blue-700"

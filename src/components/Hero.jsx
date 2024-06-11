@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="max-w-screen-xl  mx-auto h-auto mt-12 flex flex-col gap-12 w-full">
+    <div className="max-w-screen-2xl px-20 mx-auto h-auto mt-12 flex flex-col gap-12 w-full">
       <div className="top_content text-end mt-12">
         <h3>Web Design</h3>
         <h3>Web Development</h3>

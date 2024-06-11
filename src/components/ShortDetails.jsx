@@ -21,7 +21,7 @@ const ShortDetails = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="0.03"
-      className=" py-20 px-20 bg-[#eaeaea] rounded-3xl -mt-10 -mb-5 z-50"
+      className="py-20 px-20 bg-[#eaeaea] rounded-3xl -mt-10 -mb-5 z-50"
     >
       <h1 className=' group transition-all duration-600 ease-in-out text-black font-["Neue_Montreal"] text-[3.5vw] font-medium py-20 leading-[4vw]'>
         <span className="bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">

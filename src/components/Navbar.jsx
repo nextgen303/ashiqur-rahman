@@ -4,7 +4,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-screen-xl mx-auto flex items-center justify-between py-3">
+    <nav className="max-w-screen-2xl px-20 mx-auto flex items-center justify-between py-3">
       <a href="/" className="brightness-0">
         <svg
           className="w-10"
