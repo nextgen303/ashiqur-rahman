@@ -58,30 +58,32 @@ const WorkProcess = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <div className="work-process max-w-screen-2xl px-20 mx-auto  bg-[#eaeaea] pb-24" ref={ref}>
-      <div className="titles flex justify-between">
-        <h1 className="text-[4vw] w-1/3">Work Process</h1>
-        <p className="w-1/3 pt-36">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-          laboriosam a numquam, magni ipsam repellendus laborum minima dei ab
-          eius earum
-        </p>
-      </div>
+    <div className="work-process px-20 bg-[#eaeaea] pb-24" ref={ref}>
+      <div className="mx-auto max-w-screen-2xl">
+        <div className="titles flex justify-between">
+          <h1 className="text-[4vw] w-1/3">Work Process</h1>
+          <p className="w-1/3 pt-36">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+            laboriosam a numquam, magni ipsam repellendus laborum minima dei ab
+            eius earum
+          </p>
+        </div>
 
-      <div className="services">
-        {workProcessData.map((item, index) => (
-          <motion.div
-            key={index}
-            className="service__list-box w-1/4"
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: index * 0.2 }}
-          >
-            <h4 className="number">{item.number}</h4>
-            <h4>{item.title}</h4>
-            <p>{item.description}</p>
-          </motion.div>
-        ))}
+        <div className="services">
+          {workProcessData.map((item, index) => (
+            <motion.div
+              key={index}
+              className="service__list-box w-1/4"
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, delay: index * 0.2 }}
+            >
+              <h4 className="number">{item.number}</h4>
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

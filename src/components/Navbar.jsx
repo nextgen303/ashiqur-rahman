@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
+import Header from "../components/Header";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-screen-2xl px-20 mx-auto flex items-center justify-between py-3">
+    <nav className="max-w-screen-2xl px-20 mx-auto flex items-center justify-between py-3 relative">
       <a href="/" className="brightness-0">
         <svg
           className="w-10"
@@ -34,7 +35,7 @@ const Navbar = () => {
         </svg>
       </a>
 
-      <ul className="flex items-center gap-14">
+      <ul className="flex items-center gap-14 max-md:hidden">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -50,10 +51,20 @@ const Navbar = () => {
         </li>
       </ul>
 
-      
-      <a href="" className="bg-black text-white w-[140px] px-6 py-2 rounded-full flex items-center justify-between">
-          Contact <span className="mt-[2px]"><GoArrowRight /></span>
-        </a>
+      <a
+        href=""
+        className="bg-black text-white w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
+      >
+        Contact{" "}
+        <span className="mt-[2px]">
+          <GoArrowRight />
+        </span>
+      </a>
+
+
+      <div className="w-10 hidden max-md:block">
+      <Header />
+      </div>
     </nav>
   );
 };
