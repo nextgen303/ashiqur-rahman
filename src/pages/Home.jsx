@@ -6,6 +6,7 @@ import ShortDetails from "../components/ShortDetails";
 import WorkProcess from "../components/WorkProcess";
 import HomeProject from "../components/HomeProject";
 import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
 
 const Home = () => {
@@ -16,8 +17,7 @@ const Home = () => {
       <ShortDetails />
       <WorkProcess />
       <HomeProject />
-
-      <Footer />
+      <Layout />
     </div>
   );
 };
