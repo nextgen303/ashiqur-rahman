@@ -2,27 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    background: #eaeaea;
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #eaeaea;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
-.custom-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    cursor: pointer;
-  }
-  .custom-arrow-prev {
-    right: 100px; /* Adjust as needed */
-  }
-  .custom-arrow-next {
-    right: 10px; /* Adjust as needed */
-  }

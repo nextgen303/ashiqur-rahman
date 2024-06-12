@@ -1,0 +1,68 @@
+.btn-animation {
+  margin-top: 24px;
+  font-size: 17px;
+  padding: 10px 0px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  height: 40px;
+  width: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+}
+
+.btn-animation .inner-arrow {
+  color: white;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 50px;
+  z-index: 2;
+  margin: 0px -60px 0px 37px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-animation:hover .inner-arrow {
+  margin: unset;
+  color: #fff !important;
+  display: block;
+}
+
+.btn-animation:hover {
+  background: #000;
+  width: 135px;
+}
+
+.ab-btn {
+  color: white;
+  z-index: 2;
+  margin: 0px -13px 0px 13px;
+}
+
+.btn-animation:hover .ab-btn {
+  color: #fff !important;
+  margin: unset;
+}
+
+.btn-animation span {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.btn-animation:hover span {
+  height: 0%;
+  width: 50%;
+}

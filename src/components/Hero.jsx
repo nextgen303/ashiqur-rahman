@@ -3,8 +3,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="max-w-screen-2xl px-20 mx-auto h-auto mt-12 flex flex-col gap-12 w-full">
-      <div className="top_content text-end mt-12">
+    <div className="max-w-screen-2xl bg-[#eaeaea]  px-20 mx-auto pb-24 mt-12 flex flex-col gap-12 w-full">
+      <div className="top_content text-end pt-12">
         <h3>Web Design</h3>
         <h3>Web Development</h3>
         <h3>Website Speed Optimization</h3>

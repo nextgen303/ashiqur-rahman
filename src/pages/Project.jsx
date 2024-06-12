@@ -17,13 +17,20 @@ const projects = [
     image: 'https://i.pinimg.com/564x/1b/b3/02/1bb302a549e2b17feda3fc2f634920b5.jpg',
     description: 'This is a description for project two.',
     features: ['Feature A', 'Feature B', 'Feature C']
-  }
-  // Add more projects as needed
+  },
+  ,
+  {
+    id: 3,
+    title: 'Project Three',
+    image: 'https://i.pinimg.com/564x/1b/b3/02/1bb302a549e2b17feda3fc2f634920b5.jpg',
+    description: 'This is a description for project two.',
+    features: ['Feature A', 'Feature B', 'Feature C']
+  },
 ];
 
 const Project = () => {
   return (
-    <div className="container mx-auto max-w-screen-2xl">
+    <div className="container mx-auto max-w-screen-2xl px-20">
       <h1 className="text-4xl font-bold text-center my-8">Work</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
