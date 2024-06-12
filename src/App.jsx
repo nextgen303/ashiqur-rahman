@@ -10,8 +10,11 @@ import Project from "./pages/Project";
 import Login from "./pages/Login";
 import NotFoundPage from './pages/404';
 import CustomCursor from "./components/CustomCursor";
+import LocomotiveScroll from 'locomotive-scroll';
 
 const App = () => {
+  const locomotiveScroll = new LocomotiveScroll();
+  
   return (
     <div className="select-none">
     <Router>

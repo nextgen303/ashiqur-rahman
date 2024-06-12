@@ -3,7 +3,13 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="max-w-screen-2xl bg-[#eaeaea]  px-20 mx-auto pb-24 mt-12 flex flex-col gap-12 w-full">
+    <div
+
+    data-scroll
+    data-scroll-section
+    data-scroll-speed="-0.4"
+
+    className="max-w-screen-2xl bg-[#eaeaea]  px-20 mx-auto pb-28 mt-12 flex flex-col gap-12 w-full">
       <div className="top_content text-end pt-12">
         <h3>Web Design</h3>
         <h3>Web Development</h3>
@@ -27,7 +33,7 @@ const Hero = () => {
                 height="100%"
               />
             </motion.div>
-            <h1 >WEB</h1>{" "}
+            <h1>WEB</h1>{" "}
           </div>
           <h1 className="text-[9vw] leading-[130px] font-bold">DEVELOPER </h1>
         </div>
