@@ -22,6 +22,34 @@ const blogs = [
     excerpt: 'This is a short description for blog post one.',
     image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
   }
+  ,
+  {
+    id: 3,
+    title: 'Blog Post Two',
+    excerpt: 'This is a short description for blog post one.',
+    image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
+  }
+  ,
+  {
+    id: 3,
+    title: 'Blog Post Two',
+    excerpt: 'This is a short description for blog post one.',
+    image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
+  }
+  ,
+  {
+    id: 3,
+    title: 'Blog Post Two',
+    excerpt: 'This is a short description for blog post one.',
+    image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
+  }
+  ,
+  {
+    id: 3,
+    title: 'Blog Post Two',
+    excerpt: 'This is a short description for blog post one.',
+    image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
+  }
   // Add more blogs as needed
 ];
 
