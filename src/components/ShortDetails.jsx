@@ -7,7 +7,7 @@ const fadeInAnimationVariants = {
     width: 0,
   },
   animate: (index) => ({
-    width: "50%",
+    width: "100%",
     transition: {
       ease: [0.83, 0, 0.17, 1],
       duration: 1.2,
@@ -22,7 +22,7 @@ const ShortDetails = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="0.03"
-      className="py-20 px-20 bg-[#eaeaea] rounded-3xl -mt-10 -mb-5 z-50"
+      className="py-20 px-20 max-sm:px-5 bg-[#eaeaea] rounded-3xl -mt-10 -mb-5 z-50"
     >
       <div className="max-w-screen-2xl mx-auto">
         <h1 className=' group transition-all duration-600 ease-in-out text-black font-["Neue_Montreal"] text-[3.5vw] font-medium py-20 leading-[4vw]'>
@@ -35,8 +35,8 @@ const ShortDetails = () => {
           </span>
         </h1>
 
-        <div className="w-full flex gap-5 border-t mt-2 pt-10 border-[#0000005b]">
-          <div className="w-1/2">
+        <div className="w-full flex max-sm:flex-col gap-5 border-t mt-2 pt-10 border-[#0000005b]">
+          <div className="w-1/2 max-sm:w-ful">
             <h1 className="text-[4vw]">Our approach:</h1>
             <Button label="About Me" />
           </div>
@@ -48,7 +48,7 @@ const ShortDetails = () => {
             viewport={{
               once: true,
             }}
-            className="w-1/2 h-[400px] lg:h-[440px] md:h-[400px] sm:h-[400px] xs:h-[400px] bg-black rounded-3xl overflow-hidden"
+            className="w-1/2 max-sm:w-[100%] h-[480px] rounded-3xl overflow-hidden"
           >
             <img
               className="w-full h-full object-cover"

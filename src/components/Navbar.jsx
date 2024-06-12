@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-screen-2xl px-20 mx-auto flex items-center justify-between py-3 relative">
+    <nav className="max-w-screen-2xl px-20 max-xl:px-10 max-md:px-1 mx-auto flex items-center justify-between py-3 relative">
       <a href="/" className="brightness-0">
         <svg
           className="w-10"

@@ -58,11 +58,11 @@ const WorkProcess = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <div className="work-process px-20 bg-[#eaeaea] pb-24" ref={ref}>
+    <div className="work-process px-20 max-sm:px-5 bg-[#eaeaea] pb-24" ref={ref}>
       <div className="mx-auto max-w-screen-2xl">
         <div className="titles flex justify-between">
           <h1 className="text-[4vw] w-1/3">Work Process</h1>
-          <p className="w-1/3 pt-36">
+          <p className="w-1/3 max-sm:w-full pt-36">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
             laboriosam a numquam, magni ipsam repellendus laborum minima dei ab
             eius earum
@@ -73,7 +73,7 @@ const WorkProcess = () => {
           {workProcessData.map((item, index) => (
             <motion.div
               key={index}
-              className="service__list-box w-1/4"
+              className="service__list-box w-1/4 max-sm:w-full max-sm:mt-20"
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: index * 0.2 }}
