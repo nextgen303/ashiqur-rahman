@@ -37,7 +37,7 @@ const ShortDetails = () => {
 
         <div className="w-full flex max-sm:flex-col gap-5 border-t mt-2 pt-10 border-[#0000005b]">
           <div className="w-1/2 max-sm:w-ful">
-            <h1 className="text-[4vw]">Our approach:</h1>
+            <h1 className="text-[4vw]">Hey there,</h1>
             <Button label="About Me" />
           </div>
 

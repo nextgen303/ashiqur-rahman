@@ -12,8 +12,6 @@ import NotFoundPage from "./pages/404";
 import CustomCursor from "./components/CustomCursor";
 import LocomotiveScroll from "locomotive-scroll";
 
-
-
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
 

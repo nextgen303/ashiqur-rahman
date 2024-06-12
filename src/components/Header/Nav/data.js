@@ -1,19 +1,19 @@
 export const links = [
     {
+        title: "Home",
+        href: "/"
+    },
+    {
+        title: "About",
+        href: "/about"
+    },
+    {
         title: "Projects",
-        href: "/"
+        href: "/project"
     },
     {
-        title: "Agency",
-        href: "/"
-    },
-    {
-        title: "Expertise",
-        href: "/"
-    },
-    {
-        title: "Careers",
-        href: "/"
+        title: "Blog",
+        href: "/blog"
     },
     {
         title: "Contact",
@@ -24,7 +24,7 @@ export const links = [
 export const footerLinks = [
     {
         title: "Facebook",
-        href: "/"
+        href: "https://www.facebook.com/nextdev2"
     },
     {
         title: "LinkedIn",

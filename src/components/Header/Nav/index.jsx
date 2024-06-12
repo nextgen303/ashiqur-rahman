@@ -2,6 +2,7 @@ import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { links, footerLinks } from "./data";
 import { perspective, slideIn } from "./anim";
+import { Link } from "react-router-dom";
 
 export default function index() {
   return (
@@ -11,7 +12,7 @@ export default function index() {
           const { title, href } = link;
           return (
             <div key={`b_${i}`} className={styles.linkContainer}>
-              <motion.div
+              <motion.a
                 href={href}
                 custom={i}
                 variants={perspective}
@@ -20,7 +21,7 @@ export default function index() {
                 exit="exit"
               >
                 <a>{title}</a>
-              </motion.div>
+              </motion.a>
             </div>
           );
         })}
@@ -30,6 +31,7 @@ export default function index() {
           const { title, href } = link;
           return (
             <motion.a
+              href={href}
               variants={slideIn}
               custom={i}
               initial="initial"
