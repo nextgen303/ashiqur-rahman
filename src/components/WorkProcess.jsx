@@ -89,7 +89,7 @@ const WorkProcess = () => {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 3.4,
             spaceBetween: 50,
           },
         }}

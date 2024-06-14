@@ -1,7 +1,8 @@
+import React from "react";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
-import { links, footerLinks } from "./data";
 import { perspective, slideIn } from "./anim";
+import { links, footerLinks } from "./data";
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
                 initial="initial"
                 animate="enter"
                 exit="exit"
+                className={styles.link}
               >
                 {title}
               </motion.a>
@@ -37,6 +39,7 @@ export default function Index() {
               animate="enter"
               exit="exit"
               key={`f_${i}`}
+              className={styles.footerLink}
             >
               {title}
             </motion.a>
