@@ -4,7 +4,7 @@ const Testimonial = () => {
   return (
     <div className="bg-[#eaeaea]">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
-        <div className="text-gray-600 dark:text-gray-300 pt-8 dark:bg-gray-900" id="testimonials">
+        <div className="text-gray-600 dark:text-gray-300 pt-8" id="testimonials">
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="mb-10 space-y-4 px-6 md:px-0">
               <h2 className="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">

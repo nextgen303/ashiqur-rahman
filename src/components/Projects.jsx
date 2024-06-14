@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll, motion } from "framer-motion";
-import styles from "./project.module.scss"; // Import the CSS module
+import styles from "./project.module.scss"; 
 
 const images = [
   "https://images.pexels.com/photos/4067506/pexels-photo-4067506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
