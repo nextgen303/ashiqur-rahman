@@ -32,7 +32,8 @@ export default function Index() {
         {footerLinks.map((link, i) => {
           const { title, href } = link;
           return (
-            <motion.div
+            <motion.a
+              href={href}
               variants={slideIn}
               custom={i}
               initial="initial"
@@ -40,10 +41,8 @@ export default function Index() {
               exit="exit"
               key={`f_${i}`}
             >
-              <a href={href} className={styles.footerLink} target="_blank" rel="noopener noreferrer">
-                {title}
-              </a>
-            </motion.div>
+              {title}
+            </motion.a>
           );
         })}
       </motion.div>

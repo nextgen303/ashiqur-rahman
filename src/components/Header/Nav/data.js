@@ -17,7 +17,7 @@ export const links = [
     },
     {
         title: "Contact",
-        href: "/contact"
+        href: "/"
     }
 ]
 
@@ -28,14 +28,14 @@ export const footerLinks = [
     },
     {
         title: "LinkedIn",
-        href: "https://www.linkedin.com"
+        href: "/"
     },
     {
         title: "Instagram",
-        href: "https://www.instagram.com"
+        href: "/"
     },
     {
         title: "Twitter",
-        href: "https://www.twitter.com"
+        href: "/"
     }
 ]
