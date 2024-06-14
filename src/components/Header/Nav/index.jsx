@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
-import { perspective, slideIn } from "./anim";
 import { links, footerLinks } from "./data";
+import { perspective, slideIn } from "./anim";
 
 export default function Index() {
   return (
@@ -12,17 +13,17 @@ export default function Index() {
           const { title, href } = link;
           return (
             <div key={`b_${i}`} className={styles.linkContainer}>
-              <motion.a
-                href={href}
+              <motion.div
                 custom={i}
                 variants={perspective}
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                className={styles.link}
               >
-                {title}
-              </motion.a>
+                <Link to={href} className={styles.link}>
+                  {title}
+                </Link>
+              </motion.div>
             </div>
           );
         })}
@@ -31,18 +32,18 @@ export default function Index() {
         {footerLinks.map((link, i) => {
           const { title, href } = link;
           return (
-            <motion.a
-              href={href}
+            <motion.div
               variants={slideIn}
               custom={i}
               initial="initial"
               animate="enter"
               exit="exit"
               key={`f_${i}`}
-              className={styles.footerLink}
             >
-              {title}
-            </motion.a>
+              <a href={href} className={styles.footerLink} target="_blank" rel="noopener noreferrer">
+                {title}
+              </a>
+            </motion.div>
           );
         })}
       </motion.div>
