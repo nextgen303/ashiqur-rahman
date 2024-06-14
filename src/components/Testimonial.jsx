@@ -1,5 +1,29 @@
 import React from "react";
 
+const testimonials = [
+  {
+    name: "John Smith",
+    role: "CEO, Tech Solutions Inc.",
+    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    content:
+      "Working with your team has been an absolute pleasure. Your dedication to our project and your innovative solutions have significantly boosted our productivity and efficiency. Looking forward to continuing our collaboration!",
+  },
+  {
+    name: "Emily Johnson",
+    role: "Marketing Manager, Global Tech Innovators",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    content:
+      "I'm impressed with the level of professionalism and expertise your team brought to the table. From start to finish, you've demonstrated a deep understanding of our needs and delivered results beyond our expectations. Highly recommended!",
+  },
+  {
+    name: "Michael Brown",
+    role: "CTO, Digital Ventures LLC",
+    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    content:
+      "Your team's IT consultation services have been invaluable to our company. The strategic insights and practical solutions you provided helped us streamline operations and achieve significant cost savings. Thank you for your exceptional support!",
+  },
+];
+
 const Testimonial = () => {
   return (
     <div className="bg-[#eaeaea] rounded-bl-[20px] rounded-br-[20px] pb-20">
@@ -11,134 +35,27 @@ const Testimonial = () => {
                 Hear from our happy customers.
               </h2>
             </div>
-            <div className="md:columns-2 lg:columns-3 gap-8 space-y-8">
-              <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-                <div className="flex gap-4">
-                  <img
-                    className="w-12 h-12 rounded-full"
-                    src="https://randomuser.me/api/portraits/women/12.jpg"
-                    alt="user avatar"
-                    width="400"
-                    height="400"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 className="text-lg font-medium text-gray-700 dark:text-white">Daniella Doe</h6>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 space-y-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+                >
+                  <div className="flex gap-4">
+                    <img
+                      className="w-12 h-12 rounded-full"
+                      src={testimonial.avatar}
+                      alt="user avatar"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h6 className="text-lg font-medium text-gray-700 dark:text-white">{testimonial.name}</h6>
+                      <p className="text-sm text-gray-500 dark:text-gray-300">{testimonial.role}</p>
+                    </div>
                   </div>
+                  <p className="mt-8">{testimonial.content}</p>
                 </div>
-                <p className="mt-8">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid quo eum quae quos illo earum
-                  ipsa doloribus nostrum minus libero aspernatur laborum cum, a suscipit, ratione ea totam ullam! Lorem
-                  ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab veniam
-                  sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum
-                  et rerum.
-                </p>
-              </div>
-              <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-                <div className="flex gap-4">
-                  <img
-                    className="w-12 h-12 rounded-full"
-                    src="https://randomuser.me/api/portraits/women/14.jpg"
-                    alt="user avatar"
-                    width="200"
-                    height="200"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 className="text-lg font-medium text-gray-700 dark:text-white">Jane doe</h6>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">Marketing</p>
-                  </div>
-                </div>
-                <p className="mt-8">
-                  Lorem ipsum dolor laboriosam deleniti aperiam ab veniam sint non cumque quis tempore cupiditate. Sint
-                  libero voluptas veniam at reprehenderit, veritatis harum et rerum.
-                </p>
-              </div>
-              <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-                <div className="flex gap-4">
-                  <img
-                    className="w-12 h-12 rounded-full"
-                    src="https://randomuser.me/api/portraits/women/18.jpg"
-                    alt="user avatar"
-                    width="200"
-                    height="200"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 className="text-lg font-medium text-gray-700 dark:text-white">Yanick Doe</h6>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">Developer</p>
-                  </div>
-                </div>
-                <p className="mt-8">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab
-                  veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis
-                  harum et rerum.
-                </p>
-              </div>
-              <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-                <div className="flex gap-4">
-                  <img
-                    className="w-12 h-12 rounded-full"
-                    src="https://randomuser.me/api/portraits/women/2.jpg"
-                    alt="user avatar"
-                    width="200"
-                    height="200"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 className="text-lg font-medium text-gray-700 dark:text-white">Jane Doe</h6>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-                  </div>
-                </div>
-                <p className="mt-8">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab
-                  veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis
-                  harum et rerum.
-                </p>
-              </div>
-              <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-                <div className="flex gap-4">
-                  <img
-                    className="w-12 h-12 rounded-full"
-                    src="https://randomuser.me/api/portraits/women/62.jpg"
-                    alt="user avatar"
-                    width="200"
-                    height="200"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 className="text-lg font-medium text-gray-700 dark:text-white">Andy Doe</h6>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">Manager</p>
-                  </div>
-                </div>
-                <p className="mt-8">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab
-                  veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis
-                  harum et rerum.
-                </p>
-              </div>
-              <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
-                <div className="flex gap-4">
-                  <img
-                    className="w-12 h-12 rounded-full"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt="user avatar"
-                    width="400"
-                    height="400"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h6 className="text-lg font-medium text-gray-700 dark:text-white">Yanndy Doe</h6>
-                    <p className="text-sm text-gray-500 dark:text-gray-300">Mobile dev</p>
-                  </div>
-                </div>
-                <p className="mt-8">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto laboriosam deleniti aperiam ab
-                  veniam sint non cumque quis tempore cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis
-                  harum et rerum.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

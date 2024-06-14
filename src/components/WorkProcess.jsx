@@ -1,66 +1,64 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./WorkProcess.css";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+
+import { Autoplay, Navigation } from 'swiper/modules';
+
+
 const workProcessData = [
   {
     number: "01",
-    title: "Application provision",
+    title: "Planning",
     description:
-      "Simplifies software deployment, management, and scalability. Make app management effortless with us.",
+      "Define project scope, goals, and requirements. Create wireframes and mockups to visualize the layout and functionality.",
   },
   {
     number: "02",
-    title: "Hardware solutions",
-    description: "Ensuring your business stays at the forefront of technology.",
+    title: "Design",
+    description:
+      "Craft visually appealing and user-friendly interfaces. Ensure consistency with brand guidelines and optimize for usability.",
   },
   {
     number: "03",
-    title: "IT consultation",
+    title: "Development",
     description:
-      "Drive your success with strategic guidance and practical solutions, optimizing your technology for peak performance.",
+      "Write clean, efficient code using modern web technologies. Implement responsive design and ensure cross-browser compatibility.",
   },
   {
     number: "04",
-    title: "IT services",
+    title: "Testing",
     description:
-      "From network management to cybersecurity, we cover all your tech needs.",
+      "Conduct rigorous testing to identify and fix bugs. Perform usability testing to ensure the site or application meets user expectations.",
   },
   {
     number: "05",
-    title: "IT services",
+    title: "Deployment",
     description:
-      "From network management to cybersecurity, we cover all your tech needs.",
+      "Deploy the website or application to the live server. Configure servers and databases for optimal performance and security.",
   },
   {
     number: "06",
-    title: "IT services",
+    title: "Maintenance",
     description:
-      "From network management to cybersecurity, we cover all your tech needs.",
-  },
-  {
-    number: "07",
-    title: "IT services",
-    description:
-      "From network management to cybersecurity, we cover all your tech needs.",
-  },
-
-  {
-    number: "08",
-    title: "IT services",
-    description:
-      "From network management to cybersecurity, we cover all your tech needs.",
+      "Monitor site performance and security. Update content, plugins, and frameworks to maintain functionality and security.",
   },
 ];
+
 
 const WorkProcess = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <div className="work-process px-20 max-sm:px-5 bg-[#eaeaea] pb-24" ref={ref}>
+    <div className="work-process px-20 max-sm:px-5 bg-[#eaeaea] pb-36 " ref={ref}>
       <div className="mx-auto max-w-screen-2xl">
-        <div className="titles flex justify-between">
+        <div className="titles flex justify-between mb-20">
           <h1 className="text-[4vw] w-1/3">Work Process</h1>
           <p className="w-1/3 max-sm:w-full pt-36">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
@@ -68,23 +66,50 @@ const WorkProcess = () => {
             eius earum
           </p>
         </div>
+      </div>
 
-        <div className="services">
-          {workProcessData.map((item, index) => (
+      <Swiper
+        slidesPerView={1}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+
+        modules={[Autoplay, Navigation]}
+        
+        navigation={true}
+        spaceBetween={10}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
+        className="mySwiper"
+      >
+        {workProcessData.map((item, index) => (
+          <SwiperSlide key={index}>
             <motion.div
-              key={index}
-              className="service__list-box w-1/4 max-sm:w-full max-sm:mt-20"
+              className="service__list-box text-black rounded-lg  p-6"
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: index * 0.2 }}
             >
-              <h4 className="number">{item.number}</h4>
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
+              <h4 className="number text-lg font-bold">{item.number}</h4>
+              <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
+              <p className="text-base">{item.description}</p>
             </motion.div>
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
