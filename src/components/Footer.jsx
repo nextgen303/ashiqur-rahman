@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" bg-[#000] fixed bottom-0 left-0 right-0 px-20 text-white h-[480px] max-lg:h-[600px] max-md:h-[800px] max-sm:h-[1200px] pt-20 -z-30">
-      <div class="max-w-screen-2xl px-20 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24">
+    <div className=" bg-[#000] fixed bottom-0 left-0 right-0 px-20 text-white h-[480px] max-lg:h-[600px] max-md:!h-[800px] max-sm:!h-max pt-20 -z-30">
+      <div class="max-w-screen-2xl px-20 pt-16 pb-6 mx-auto sm:px-3 lg:px-8 lg:pt-24">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div class="flex justify-center text-white sm:justify-start">

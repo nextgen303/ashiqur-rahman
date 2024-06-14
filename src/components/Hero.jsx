@@ -7,9 +7,9 @@ const Hero = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.4"
-      className=" bg-[#eaeaea]  pb-28 mt-12 flex flex-col gap-12 w-full"
+      className=" bg-[#eaeaea]  pb-28 pt-12 flex flex-col gap-12 w-full -mt-12 -z-10"
     >
-      <div className=" max-w-screen-2xl px-20 max-xl:px-10 max-md:px-1 mx-auto">
+      <div className=" max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
         <div className="top_content text-end pt-12">
           <h3>Web Design</h3>
           <h3>Web Development</h3>

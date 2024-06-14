@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { links, footerLinks } from "./data";
 import { perspective, slideIn } from "./anim";
 
-export default function index() {
+export default function Index() {
   return (
     <div className={styles.nav}>
       <div className={styles.body}>
@@ -19,7 +19,7 @@ export default function index() {
                 animate="enter"
                 exit="exit"
               >
-                <a>{title}</a>
+                {title}
               </motion.a>
             </div>
           );
