@@ -3,44 +3,10 @@ import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import Header from "../components/Header";
 import Magnetic from "../components/MagnetEffect";
-import classNames from "classnames";
 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down, hide the navbar
-        setShowNavbar(false);
-      } else {
-        // if scroll up, show the navbar
-        setShowNavbar(true);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
-
   return (
-    <nav
-      className={classNames(
-        "max-w-screen-2xl px-20 max-xl:px-10 max-md:px-1 mx-auto flex items-center justify-between py-3 relative transition-transform duration-300",
-        {
-          "transform -translate-y-full": !showNavbar,
-        }
-      )}
-    >
+    <nav className="max-w-screen-2xl px-20 max-xl:px-10 max-md:px-1 mx-auto flex items-center justify-between py-3 relative transition-transform duration-300">
       <a href="/" className="brightness-0">
         <svg
           className="w-10"

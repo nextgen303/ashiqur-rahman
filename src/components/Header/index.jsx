@@ -9,14 +9,14 @@ import Nav from "./Nav";
 const menu = {
   open: {
     width: "100%",
-    height: "650px",
+    height: "100%",
     top: "-5px",
     right: "-5px",
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
-    width: "100px",
-    height: "40px",
+    width: "90px",
+    height: "30px",
     top: "0px",
     right: "0px",
     transition: {
