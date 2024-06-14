@@ -1,5 +1,5 @@
 .gallery {
-  height: 1300px;
+  height: 175vh;
   background: rgb(0, 0, 0);
   position: relative;
   display: flex;
@@ -53,21 +53,35 @@
       gap: 5vw;
 
       &:nth-of-type(1),
+      &:nth-of-type(3) {
+        top: -500px;
+      }
+
       &:nth-of-type(2),
-      &:nth-of-type(3),
       &:nth-of-type(4) {
-        top: -600px;
-        bottom: 0px;
+        top: -1400px;
       }
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 668px) {
     padding: 1vw;
     gap: 3vw;
+    flex-direction: column;
 
     .column {
       gap: 3vw;
+
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        top: -300px;
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        display: none;
+      }
+
       .imageContainer {
         border-radius: 2vw;
 
@@ -77,26 +91,18 @@
         }
       }
     }
+
+    &:nth-of-type(2) {
+      top: -5%;
+    }
   }
 
-  @media (max-width: 580px) {
-    height: max-content;
-    flex-direction: column;
+  @media (max-width: 480px) {
     padding: 0.5vw;
-    gap: 0vw;
+    gap: 2vw;
 
     .column {
       gap: 2vw;
-
-      &:nth-of-type(1) {
-        top: -600px;
-        bottom: 0;
-      }
-      &:nth-of-type(2),
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        display: none;
-      }
 
       .imageContainer {
         border-radius: 3vw;

@@ -1,49 +1,54 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 const blogs = [
   {
     id: 1,
-    title: 'Understanding React',
-    excerpt: 'Dive deep into React hooks and learn how they can simplify your code.',
-    image: 'https://i.ibb.co/DYxtCJq/img-1.png',
-    date: '12 April 2024',
+    title: "Understanding React",
+    excerpt:
+      "Dive deep into React hooks and learn how they can simplify your code.",
+    image: "https://i.ibb.co/DYxtCJq/img-1.png",
+    date: "12 April 2024",
   },
   {
     id: 2,
-    title: 'CSS Grid Layout',
-    excerpt: 'Learn the fundamentals of CSS Grid Layout to build modern web layouts.',
-    image: 'https://i.ibb.co/3C5HvxC/img-2.png',
-    date: '10 April 2024',
+    title: "CSS Grid Layout",
+    excerpt:
+      "Learn the fundamentals of CSS Grid Layout to build modern web layouts.",
+    image: "https://i.ibb.co/3C5HvxC/img-2.png",
+    date: "10 April 2024",
   },
   {
     id: 3,
-    title: 'JavaScript ES6 Features You Need to Know',
-    excerpt: 'Explore the most important features introduced in ES6 and how to use them.',
-    image: 'https://i.ibb.co/Ms4qyXp/img-3.png',
-    date: '8 April 2024',
+    title: "JavaScript ES6 Features You Need to Know",
+    excerpt:
+      "Explore the most important features introduced in ES6 and how to use them.",
+    image: "https://i.ibb.co/Ms4qyXp/img-3.png",
+    date: "8 April 2024",
   },
   {
     id: 4,
-    title: 'Building RESTful APIs with Node.js',
-    excerpt: 'A step-by-step guide to building RESTful APIs using Node.js and Express.',
-    image: 'https://i.ibb.co/6Wfjf2w/img-4.png',
-    date: '6 April 2024',
+    title: "Building RESTful APIs with Node.js",
+    excerpt:
+      "A step-by-step guide to building RESTful APIs using Node.js and Express.",
+    image: "https://i.ibb.co/6Wfjf2w/img-4.png",
+    date: "6 April 2024",
   },
   {
     id: 5,
-    title: 'Introduction to TypeScript',
-    excerpt: 'Learn how TypeScript can improve your JavaScript code with static typing.',
-    image: 'https://i.ibb.co/3yvZBpm/img-5.png',
-    date: '4 April 2024',
+    title: "Introduction to TypeScript",
+    excerpt:
+      "Learn how TypeScript can improve your JavaScript code with static typing.",
+    image: "https://i.ibb.co/3yvZBpm/img-5.png",
+    date: "4 April 2024",
   },
   {
     id: 6,
-    title: 'Mastering Git and GitHub',
-    excerpt: 'Understand the fundamentals of Git and GitHub for version control.',
-    image: 'https://i.ibb.co/gDdnJb5/img-6.png',
-    date: '2 April 2024',
+    title: "Mastering Git and GitHub",
+    excerpt:
+      "Understand the fundamentals of Git and GitHub for version control.",
+    image: "https://i.ibb.co/gDdnJb5/img-6.png",
+    date: "2 April 2024",
   },
 ];
 const HomeBlog = () => {
@@ -51,7 +56,7 @@ const HomeBlog = () => {
     <div className="bg-[#eaeaea]">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
         <div className="flex justify-center items-center">
-          <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 w-96 sm:w-auto">
+          <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9  w-full px-3 sm:w-auto">
             <div
               role="main"
               className="flex flex-col items-center justify-center"
@@ -66,11 +71,11 @@ const HomeBlog = () => {
               </p>
             </div>
             <div className="lg:flex items-stretch md:mt-12 mt-8">
-              <div className="lg:w-1/2 ">
-                <div className="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 ">
+              <div className="lg:w-1/2">
+                <div className="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
                   {blogs.slice(0, 2).map((blog) => (
-                    <div className="sm:w-1/2 relative " key={blog.id}>
-                      <div>
+                    <div className="sm:w-1/2 relative max-sm:mb-4" key={blog.id}>
+                      <div className="">
                         <p className="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">
                           {blog.date}
                         </p>
@@ -107,7 +112,7 @@ const HomeBlog = () => {
                           </Link>
                         </div>
                       </div>
-                      <img 
+                      <img
                         src={blog.image}
                         className="w-full rounded-lg"
                         alt={blog.title}
@@ -161,7 +166,7 @@ const HomeBlog = () => {
                     className="w-full mt-8 md:mt-6 hidden sm:block rounded-lg"
                   />
                   <img
-                    className="w-full mt-4 sm:hidden"
+                    className="w-full mt-4 sm:hidden rounded-lg"
                     src="https://i.ibb.co/6XYbN7f/Rectangle-29.png"
                     alt={blogs[2].title}
                   />
@@ -214,7 +219,7 @@ const HomeBlog = () => {
                     className="w-full sm:block hidden rounded-lg"
                   />
                   <img
-                    className="w-full sm:hidden"
+                    className="w-full sm:hidden rounded-lg"
                     src="https://i.ibb.co/dpXStJk/Rectangle-29.png"
                     alt={blogs[3].title}
                   />
