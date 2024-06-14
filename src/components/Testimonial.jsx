@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <div className="bg-[#eaeaea]">
+    <div className="bg-[#eaeaea] rounded-bl-[20px] rounded-br-[20px] pb-20">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
         <div className="text-gray-600 dark:text-gray-300 pt-8" id="testimonials">
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
