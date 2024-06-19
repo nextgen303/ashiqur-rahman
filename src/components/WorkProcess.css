@@ -39,7 +39,7 @@
 
 .service__list-box:hover h4 {
   transform: translateY(-40px);
-  color: rgb(255, 115, 0);
+  color: #82DAB0;
 }
 
 .service__list-box p {
