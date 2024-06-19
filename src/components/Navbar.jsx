@@ -7,7 +7,7 @@ import Magnetic from "../components/MagnetEffect";
 const Navbar = () => {
   return (
     <nav
-     className="max-w-screen-2xl bg-[#eaeaea]  px-20 max-sm:!px-3 max-xl:px-10  mx-auto flex items-center justify-between py-3 relative transition-transform duration-300 z-50">
+     className="max-w-screen-2xl bg-[#d9d9d9]  px-20 max-sm:!px-3 max-xl:px-10  mx-auto flex items-center justify-between py-3 relative transition-transform duration-300 z-50">
       <a href="/" className="brightness-0">
         <svg
           className="w-10 max-sm:w-[40px]"
@@ -64,7 +64,7 @@ const Navbar = () => {
       <Magnetic>
         <a
           href=""
-          className="bg-black text-white w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
+          className="bg-[#BDEB01] text-black w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
         >
           Contact{" "}
           <span className="mt-[2px]">
