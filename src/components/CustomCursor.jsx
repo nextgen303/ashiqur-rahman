@@ -63,12 +63,12 @@ const CustomCursor = () => {
     <>
       <div
         ref={cursorRef}
-        className="fixed w-5 h-5 border-1 border-black mix-blend-exclusion rounded-full pointer-events-none"
+        className="fixed w-5 h-5 border-1 border-black mix-blend-exclusion rounded-full pointer-events-none max-md:relative"
         style={{ top: 0, left: 0, zIndex: 1000 }}
       />
       <div
         ref={followerRef}
-        className="fixed w-3 h-3 bg-black rounded-full pointer-events-none"
+        className="fixed w-3 h-3 bg-black rounded-full pointer-events-none max-md:hidden"
         style={{ top: 0, left: 0, zIndex: 999 }}
       />
     </>
