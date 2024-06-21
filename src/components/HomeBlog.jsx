@@ -7,7 +7,7 @@ const blogs = [
     title: "Understanding React",
     excerpt:
       "Dive deep into React hooks and learn how they can simplify your code.",
-    image: "https://i.ibb.co/DYxtCJq/img-1.png",
+    image: "https://i.pinimg.com/564x/1b/7c/b8/1b7cb856b5932477510398c91ec5c603.jpg",
     date: "12 April 2024",
   },
   {
@@ -15,7 +15,7 @@ const blogs = [
     title: "CSS Grid Layout",
     excerpt:
       "Learn the fundamentals of CSS Grid Layout to build modern web layouts.",
-    image: "https://i.ibb.co/3C5HvxC/img-2.png",
+    image: "https://i.pinimg.com/originals/0f/81/ba/0f81ba5ccc1a6e275cbfb6b8af6003f8.gif",
     date: "10 April 2024",
   },
   {

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Button from "./Button";
+import ProfileImg from ".././assets/images/home/ashiqur-rahman.jpg"
 
 const fadeInAnimationVariants = {
   initial: {
@@ -36,7 +37,7 @@ const ShortDetails = () => {
         </h1>
 
         <div className="w-full flex max-sm:flex-col gap-5 border-t mt-2 pt-10 border-[#0000005b]">
-          <div className="w-1/2 max-sm:w-ful">
+          <div className="w-[80%] max-sm:w-ful">
             <h1 className="text-[4vw]">Hey there,</h1>
             <Button label="About Me" href="/about" className="custom-class" />
           </div>
@@ -48,11 +49,11 @@ const ShortDetails = () => {
             viewport={{
               once: true,
             }}
-            className="w-1/2 max-sm:w-[100%] h-[480px] rounded-3xl overflow-hidden"
+            className="w-[20%] max-sm:w-[100%] h-[480px] rounded-3xl overflow-hidden"
           >
             <img
               className="w-full h-full object-cover"
-              src="https://scontent.fird6-1.fna.fbcdn.net/v/t39.30808-6/418816837_432172515799215_2459863824828881533_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGCAsEAmoPd-n7ywXu514O8NNTI1CFdfhk01MjUIV1-GZ8qNC8aZ4KK9wPIiN4tIqgXvTqDqA4qTgi49XjRxTvG&_nc_ohc=8MzeNrWBxQgQ7kNvgEtHtFM&_nc_ht=scontent.fird6-1.fna&oh=00_AYAHIFfhk5y7yt1QPOwWPLhYZypuaW0EWeXAtpPaghcQdQ&oe=666D406B"
+              src={ProfileImg}
               alt="AshiQur Rahman"
             />
           </motion.div>

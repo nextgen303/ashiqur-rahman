@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+import HeroImg from ".././assets/images/home/hero-img.jpg";
 
 const Hero = () => {
   return (
@@ -19,21 +20,16 @@ const Hero = () => {
 
         <div className="bottom_content flex max-sm:flex-col max-sm:items-start max-sm:gap-1  items-end justify-between gap-12">
           <div className="left">
-            <div className="text-[9vw] leading-7 font-bold flex items-center gap-4">
+            <div className="text-[9vw] leading-7 font-bold flex items-center gap-4 max-md:mt-12">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "8.5vw" }}
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
                 className="w-[10vw] h-[6.7vw] rounded-md relative top-[0.8vw] overflow-hidden"
               >
-                <img
-                  src="https://i.pinimg.com/564x/63/b6/5a/63b65aa0652a6500dcbfbbc458e3c218.jpg"
-                  alt=""
-                  width="100%"
-                  height="100%"
-                />
+               <img src={HeroImg} className="w-full h-full object-cover"/>
               </motion.div>
-              <h1>WEB</h1>{" "}
+              <h1>WEB</h1>
             </div>
             <h1 className="text-[9vw] leading-[130px] font-bold">DEVELOPER </h1>
           </div>
