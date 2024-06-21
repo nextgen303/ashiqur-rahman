@@ -56,7 +56,7 @@ const WorkProcess = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <div className="work-process px-20 max-sm:px-5 bg-[#eaeaea] pb-36 " ref={ref}>
+    <div className="work-process px-20 max-sm:px-5 bg-[#eaeaea] max-md:bg-white pb-36 " ref={ref}>
       <div className="mx-auto max-w-screen-2xl">
         <div className="titles flex justify-between mb-20">
           <h1 className="text-[4vw] w-1/3">Work Process</h1>

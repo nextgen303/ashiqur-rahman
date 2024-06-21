@@ -53,7 +53,7 @@ const blogs = [
 ];
 const HomeBlog = () => {
   return (
-    <div className="bg-[#eaeaea]">
+    <div className="bg-[#eaeaea] max-md:bg-white">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
         <div className="flex justify-center items-center">
           <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9  w-full px-3 sm:w-auto">

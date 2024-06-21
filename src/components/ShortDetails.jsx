@@ -23,7 +23,7 @@ const ShortDetails = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="0.03"
-      className="py-20 px-20 max-sm:px-5 bg-[#eaeaea] rounded-3xl -mt-10 -mb-5 z-50"
+      className="py-20 px-20 max-sm:px-5 bg-[#eaeaea] max-md:bg-white rounded-3xl -mt-10 -mb-5 z-50"
     >
       <div className="max-w-screen-2xl mx-auto">
         <h1 className=' group transition-all duration-600 ease-in-out text-black  text-4xl max-md:text-xl leading-[50px] py-20'>
