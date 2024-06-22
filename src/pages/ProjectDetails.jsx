@@ -51,7 +51,7 @@ const ProjectDetails = () => {
   return (
     <div className="bg-[#ffffff]">
       <div className="max-w-screen-2xl mx-auto py-12 px-20 max-md:px-3">
-        <div className="bg-[#eaeaea81] rounded-lg py-4 px-4">
+        <div className="bg-[#ffffff81] rounded-lg py-4">
           <div className="links flex items-center justify-between gap-5">
             <Magnetic>
               <button
