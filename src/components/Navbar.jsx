@@ -38,23 +38,23 @@ const Navbar = () => {
 
       <ul className="flex items-center gap-14 max-md:hidden">
         <Magnetic>
-          <li>
+          <li className="hover:text-[#ff4800]">
             <Link to="/">Home</Link>
           </li>
         </Magnetic>
         <Magnetic>
-          <li>
+          <li className="hover:text-[#ff4800]">
             <Link to="/about">About</Link>
           </li>
         </Magnetic>
 
         <Magnetic>
-          <li>
+          <li className="hover:text-[#ff4800]">
             <Link to="/project">Projects</Link>
           </li>
         </Magnetic>
         <Magnetic>
-          <li>
+          <li className="hover:text-[#ff4800]">
             <Link to="/blog">Blog</Link>
           </li>
         </Magnetic>
@@ -63,7 +63,7 @@ const Navbar = () => {
       <Magnetic>
         <a
           href=""
-          className="bg-[#000000f5] text-white w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
+          className="bg-[#000000f5] text-white hover:bg-[#ff4800] hover:text-black w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
         >
           Contact{" "}
           <span className="mt-[2px]">

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Marquee = ({ logos }) => {
   const marqueeVariants = {
     animate: {
-      x: [0, -logos.length * 200], // Adjust based on the total width of all logos
+      x: [0, -logos.length * 200], 
       transition: {
         x: {
           repeat: Infinity,

@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { Link } from "react-router-dom";
 
+
 // Sample project data
 const projects = [
   {
@@ -40,6 +41,8 @@ const HomeProject = () => {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+
+
         <div className="text-center mt-8">
           <Link to="/project" className="text-blue-500 hover:underline">
             See All Projects
