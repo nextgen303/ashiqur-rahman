@@ -24,7 +24,7 @@ const projects = [
 
 const HomeProject = () => {
   return (
-    <div className=" bg-[#eaeaea] max-md:bg-white pb-20">
+    <div className=" pb-20">
       <div className="max-w-screen-2xl px-20 max-sm:px-5 mx-auto">
         <div className="titles flex justify-between">
           <h1 className="text-[4vw] w-1/3">Recent Projects</h1>

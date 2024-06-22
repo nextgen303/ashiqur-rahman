@@ -10,7 +10,7 @@ import HomeBlog from "../components/HomeBlog";
 import Testimonial from "../components/Testimonial";
 const Home = () => {
   return (
-    <div className="mx-auto">
+    <main className="w-full h-full bg-white text-black mx-auto">
       <Hero />
       <HomeMarquee />
       <ShortDetails />
@@ -23,7 +23,7 @@ const Home = () => {
       <Testimonial />
 
       <Layout />
-    </div>
+    </main>
   );
 };
 

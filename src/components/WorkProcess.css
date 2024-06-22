@@ -29,7 +29,7 @@
   font-size: 14px;
   font-weight: 400;
   padding-top: 50px;
-  width: 80%;
+  width: 100%;
 }
 
 .service__list-box:hover .number {
@@ -39,7 +39,7 @@
 
 .service__list-box:hover h4 {
   transform: translateY(-40px);
-  color: #82DAB0;
+  color: #ff4800;
 }
 
 .service__list-box p {

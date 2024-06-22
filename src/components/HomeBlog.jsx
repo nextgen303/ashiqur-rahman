@@ -7,7 +7,7 @@ const blogs = [
     title: "Understanding React",
     excerpt:
       "Dive deep into React hooks and learn how they can simplify your code.",
-    image: "https://i.pinimg.com/564x/1b/7c/b8/1b7cb856b5932477510398c91ec5c603.jpg",
+    image: ".././assets/images/blog/blog-1.jpg",
     date: "12 April 2024",
   },
   {
@@ -15,7 +15,7 @@ const blogs = [
     title: "CSS Grid Layout",
     excerpt:
       "Learn the fundamentals of CSS Grid Layout to build modern web layouts.",
-    image: "https://i.pinimg.com/originals/0f/81/ba/0f81ba5ccc1a6e275cbfb6b8af6003f8.gif",
+    image: ".././assets/images/blog/blog-2.jpg",
     date: "10 April 2024",
   },
   {
@@ -47,13 +47,13 @@ const blogs = [
     title: "Mastering Git and GitHub",
     excerpt:
       "Understand the fundamentals of Git and GitHub for version control.",
-    image: "https://i.ibb.co/gDdnJb5/img-6.png",
+    image:".././assets/images/blog/blog-5.jpg",
     date: "2 April 2024",
   },
 ];
 const HomeBlog = () => {
   return (
-    <div className="bg-[#eaeaea] max-md:bg-white">
+    <div className="">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
         <div className="flex justify-center items-center">
           <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9  w-full px-3 sm:w-auto">
@@ -74,7 +74,10 @@ const HomeBlog = () => {
               <div className="lg:w-1/2">
                 <div className="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
                   {blogs.slice(0, 2).map((blog) => (
-                    <div className="sm:w-1/2 relative max-sm:mb-4" key={blog.id}>
+                    <div
+                      className="sm:w-1/2 relative max-sm:mb-4"
+                      key={blog.id}
+                    >
                       <div className="">
                         <p className="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">
                           {blog.date}
