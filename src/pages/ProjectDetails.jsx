@@ -15,7 +15,7 @@ const projects = [
     mainImage:
       "https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg",
     description: "This is a description for project one.",
-    features: ["Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling", "Responsive Design", "Feature 3", "Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling", "Responsive Design", "Feature 3", "Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling", "Responsive Design", "Feature 3"],
+    features: ["Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling", "Responsive Design", "Feature 3", "Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling"],
     additionalImages: [
       "https://via.placeholder.com/800x400.png?text=Additional+Image+1",
       "https://via.placeholder.com/800x400.png?text=Additional+Image+2",
