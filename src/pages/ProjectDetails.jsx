@@ -42,7 +42,10 @@ const ProjectDetails = () => {
   const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
-    return <div className="mx-auto px-4">Project not found</div>;
+    return <div className="mx-auto text-[5vw] font-semibold flex flex-col  items-center justify-center h-screen">
+      <h1>303!</h1>
+      <h4>Project not found</h4>
+    </div>;
   }
 
   return (
@@ -53,7 +56,7 @@ const ProjectDetails = () => {
             <Magnetic>
               <button
                 onClick={() => navigate(-1)}
-                className=" w-8 h-8 bg-black/10 text-2xl flex items-center justify-center text-black p-1 rounded-full hover:bg-[#ff4800] hover:text-black duration-150"
+                className=" w-8 h-8 bg-black/10 text-2xl flex items-center justify-center text-black p-[6px] rounded-full hover:bg-[#ff4800] hover:text-black duration-150"
               >
                 <MdOutlineArrowBackIosNew />
               </button>
