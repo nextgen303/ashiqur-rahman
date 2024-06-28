@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import Header from "../components/Header";
 import Magnetic from "../components/MagnetEffect";
 import Logo from "./Logo";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  if (location.pathname.startsWith("/project/") || location.pathname.startsWith("/blog/")) {
+    return null;
+  }
+
   return (
-    <nav className="max-w-screen-2xl px-20  max-sm:!px-3 max-xl:px-10  mx-auto  py-3 max-md:py-2 relative transition-transform duration-300 z-40">
-      <div className="border-b border-black/5 max-md:border-none flex items-center justify-between pb-3 ">
+    <nav className="max-w-screen-2xl px-20 max-sm:!px-3 max-xl:px-10 mx-auto py-3 max-md:py-2 relative transition-transform duration-300 z-40">
+      <div className="border-b border-black/5 max-md:border-none flex items-center justify-between pb-3">
         <Logo />
 
         <ul className="flex items-center gap-14 max-md:hidden">

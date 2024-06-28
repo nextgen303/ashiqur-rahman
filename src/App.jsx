@@ -1,5 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -10,26 +15,53 @@ import Project from "./pages/Project";
 import Login from "./pages/Login";
 import NotFoundPage from "./pages/404";
 import CustomCursor from "./components/CustomCursor";
+import Preloader from "./components/Preloader";
 import LocomotiveScroll from "locomotive-scroll";
 
+const AppContent = ({ setLoading }) => {
+  const location = useLocation();
+
+  const hideNavbar =
+    location.pathname.startsWith("/project/") ||
+    location.pathname.startsWith("/blog/");
+
+  useEffect(() => {
+    setLoading(true);
+  }, [location, setLoading]);
+
+  return (
+    <>
+      {!hideNavbar && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      <CustomCursor />
+    </>
+  );
+};
+
 const App = () => {
-  const locomotiveScroll = new LocomotiveScroll();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll();
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
 
   return (
     <div className="select-none">
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/project/:id" element={<ProjectDetails />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogDetails />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        <CustomCursor />
+        {loading && <Preloader setLoading={setLoading} />}
+        <AppContent setLoading={setLoading} />
       </Router>
     </div>
   );
