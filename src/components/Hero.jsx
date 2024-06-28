@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
 import HeroImg from ".././assets/images/home/hero-img.jpg";
-import { BsLinkedin, BsPinterest,  BsFacebook , BsGithub     } from "react-icons/bs";
-import { FaXTwitter  } from "react-icons/fa6";
+import { BsLinkedin, BsPinterest, BsFacebook, BsGithub } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+import Magnetic from "../components/MagnetEffect";
 
 const Hero = () => {
   return (
@@ -40,31 +41,41 @@ const Hero = () => {
 
           <div className="right w-[30%] max-sm:w-[100%] flex flex-col">
             <p>
-              Let's collaborate to turn your vision into reality. <br />{" "}
+              Let's collaborate to turn your vision into reality. <br />
               Together, we'll create a stunning website that not only meets but
               exceeds your expectations.
             </p>
 
             <div className="flex items-start gap-5 pt-4">
-              <a href="#" className="text-2xl" >
-              <BsFacebook />
-              </a>
+              <Magnetic>
+                <a href="#" className="text-2xl">
+                  <BsFacebook />
+                </a>
+              </Magnetic>
 
-              <a href="#" className="text-2xl" >
-              <BsLinkedin />
-              </a>
+              <Magnetic>
+                <a href="#" className="text-2xl">
+                  <BsLinkedin />
+                </a>
+              </Magnetic>
 
-              <a href="#" className="text-2xl" >
-              <BsPinterest />
-              </a>
+              <Magnetic>
+                <a href="#" className="text-2xl">
+                  <BsPinterest />
+                </a>
+              </Magnetic>
 
-              <a href="#" className="text-2xl" >
-              <BsGithub />
-              </a>
+              <Magnetic>
+                <a href="#" className="text-2xl">
+                  <BsGithub />
+                </a>
+              </Magnetic>
 
-              <a href="#" className="text-2xl" >
-              <FaXTwitter />
-              </a>
+              <Magnetic>
+                <a href="#" className="text-2xl">
+                  <FaXTwitter />
+                </a>
+              </Magnetic>
             </div>
           </div>
         </div>

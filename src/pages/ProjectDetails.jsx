@@ -4,8 +4,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 import Magnetic from "../components/MagnetEffect";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
 import { IoLogoYoutube } from "react-icons/io";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import { RiYoutubeLine } from "react-icons/ri";
 
 // Sample project data (add more as needed)
 const projects = [
@@ -15,7 +17,18 @@ const projects = [
     mainImage:
       "https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg",
     description: "This is a description for project one.",
-    features: ["Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling", "Responsive Design", "Feature 3", "Smooth Scrolling", "Responsive Design", "Feature 3","Smooth Scrolling"],
+    features: [
+      "Smooth Scrolling",
+      "Responsive Design",
+      "Feature 3",
+      "Smooth Scrolling",
+      "Responsive Design",
+      "Feature 3",
+      "Smooth Scrolling",
+      "Responsive Design",
+      "Feature 3",
+      "Smooth Scrolling",
+    ],
     additionalImages: [
       "https://via.placeholder.com/800x400.png?text=Additional+Image+1",
       "https://via.placeholder.com/800x400.png?text=Additional+Image+2",
@@ -42,15 +55,17 @@ const ProjectDetails = () => {
   const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
-    return <div className="mx-auto text-[5vw] font-semibold flex flex-col  items-center justify-center h-screen">
-      <h1>303!</h1>
-      <h4>Project not found</h4>
-    </div>;
+    return (
+      <div className="mx-auto text-[5vw] font-semibold flex flex-col  items-center justify-center h-screen">
+        <h1>303!</h1>
+        <h4>Project not found</h4>
+      </div>
+    );
   }
 
   return (
     <div className="bg-[#ffffff] z-50">
-      <div className="max-w-screen-2xl mx-auto py-12 px-20 max-md:px-3">
+      <div className="max-w-screen-2xl mx-auto pt-2 px-20 max-md:px-3">
         <div className="bg-[#ffffff81] rounded-lg py-4">
           <div className="links flex items-center justify-between gap-5">
             <Magnetic>
@@ -62,22 +77,13 @@ const ProjectDetails = () => {
               </button>
             </Magnetic>
 
-            <div className="link flex items-center gap-10">
+            <div className="link flex items-center gap-6">
               <Magnetic>
                 <a
                   className="text-2xl  hover:text-[#ff0000] duration-150"
                   href=""
                 >
-                  <IoLogoYoutube />
-                </a>
-              </Magnetic>
-
-              <Magnetic>
-                <a
-                  className="text-2xl  hover:text-[#ff0000] duration-150"
-                  href=""
-                >
-                  <FaGithub />
+                  <RiYoutubeLine />
                 </a>
               </Magnetic>
 
@@ -86,7 +92,16 @@ const ProjectDetails = () => {
                   className="text-xl  hover:text-[#ff0000] duration-150"
                   href=""
                 >
-                  <FaExternalLinkAlt />
+                  <FiGithub />
+                </a>
+              </Magnetic>
+
+              <Magnetic>
+                <a
+                  className="text-xl  hover:text-[#ff0000] duration-150"
+                  href=""
+                >
+                  <HiOutlineExternalLink />
                 </a>
               </Magnetic>
             </div>
@@ -99,9 +114,9 @@ const ProjectDetails = () => {
               className="w-full h-96 object-cover rounded-md"
             />
             <div>
-            <h1 className="text-[3vw] font-semibold line-clamp-1">
-            {project.title}
-          </h1>
+              <h1 className="text-[3vw] font-semibold line-clamp-1">
+                {project.title}
+              </h1>
 
               <p className="text-xl text-gray-700 mb-4">
                 {project.description}
