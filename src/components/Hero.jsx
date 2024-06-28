@@ -18,10 +18,9 @@ const Hero = () => {
           <h3>Web Design</h3>
           <h3>Web Development</h3>
           <h3>Website Speed Optimization</h3>
-          <h3>Youtube Video SEO</h3>
         </div>
 
-        <div className="bottom_content flex max-sm:flex-col max-sm:items-start max-sm:gap-1  items-end justify-between gap-12">
+        <div className="bottom_content pt-24 flex max-sm:flex-col max-sm:items-start max-sm:gap-1  items-end justify-between gap-12">
           <div className="left">
             <div className="text-[9vw] max-sm:text-[70px] leading-7 font-bold flex items-center gap-4 max-md:mt-12">
               <motion.div
