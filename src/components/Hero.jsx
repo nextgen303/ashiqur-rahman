@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 import HeroImg from ".././assets/images/home/hero-img.jpg";
+import { BsLinkedin, BsPinterest,  BsFacebook , BsGithub     } from "react-icons/bs";
+import { FaXTwitter  } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -27,19 +29,43 @@ const Hero = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
                 className="w-[10vw] h-[6.7vw] rounded-md relative top-[0.8vw] overflow-hidden max-sm:hidden"
               >
-               <img src={HeroImg} className="w-full h-full object-cover"/>
+                <img src={HeroImg} className="w-full h-full object-cover" />
               </motion.div>
               <h1>WEB</h1>
             </div>
-            <h1 className="text-[9vw] max-sm:text-[50px] leading-[130px] font-bold">DEVELOPER </h1>
+            <h1 className="text-[9vw] max-sm:text-[50px] leading-[130px] font-bold">
+              DEVELOPER{" "}
+            </h1>
           </div>
 
-          <div className="right w-[30%] max-sm:w-[100%]">
+          <div className="right w-[30%] max-sm:w-[100%] flex flex-col">
             <p>
               Let's collaborate to turn your vision into reality. <br />{" "}
               Together, we'll create a stunning website that not only meets but
               exceeds your expectations.
             </p>
+
+            <div className="flex items-start gap-5 pt-4">
+              <a href="#" className="text-2xl" >
+              <BsFacebook />
+              </a>
+
+              <a href="#" className="text-2xl" >
+              <BsLinkedin />
+              </a>
+
+              <a href="#" className="text-2xl" >
+              <BsPinterest />
+              </a>
+
+              <a href="#" className="text-2xl" >
+              <BsGithub />
+              </a>
+
+              <a href="#" className="text-2xl" >
+              <FaXTwitter />
+              </a>
+            </div>
           </div>
         </div>
       </div>
