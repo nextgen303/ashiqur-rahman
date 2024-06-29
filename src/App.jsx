@@ -21,10 +21,12 @@ import LocomotiveScroll from "locomotive-scroll";
 const AppContent = ({ setLoading }) => {
   const location = useLocation();
 
+  // Conditionally hide the navbar
   const hideNavbar =
     location.pathname.startsWith("/project/") ||
     location.pathname.startsWith("/blog/");
 
+  // Set loading state when location changes
   useEffect(() => {
     setLoading(true);
   }, [location, setLoading]);
@@ -50,6 +52,7 @@ const AppContent = ({ setLoading }) => {
 const App = () => {
   const [loading, setLoading] = useState(true);
 
+  // Initialize LocomotiveScroll and clean up on unmount
   useEffect(() => {
     const scroll = new LocomotiveScroll();
     return () => {
