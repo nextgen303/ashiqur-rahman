@@ -34,7 +34,7 @@ const AppContent = ({ setLoading }) => {
   return (
     <>
       {!hideNavbar && <Navbar />}
-      <Routes>
+      <Routes key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
