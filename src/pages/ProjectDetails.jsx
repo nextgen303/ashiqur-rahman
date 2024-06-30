@@ -1,15 +1,11 @@
-// src/pages/ProjectDetails.jsx
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 import Magnetic from "../components/MagnetEffect";
 import { FiGithub } from "react-icons/fi";
-import { IoLogoYoutube } from "react-icons/io";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { RiYoutubeLine } from "react-icons/ri";
 
-// Sample project data (add more as needed)
 const projects = [
   {
     id: 1,
@@ -78,15 +74,6 @@ const ProjectDetails = () => {
             </Magnetic>
 
             <div className="link flex items-center gap-6">
-              <Magnetic>
-                <a
-                  className="text-2xl  hover:text-[#ff0000] duration-150"
-                  href=""
-                >
-                  <RiYoutubeLine />
-                </a>
-              </Magnetic>
-
               <Magnetic>
                 <a
                   className="text-xl  hover:text-[#ff0000] duration-150"
