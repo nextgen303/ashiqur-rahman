@@ -98,10 +98,10 @@ const ProjectDetails = () => {
             <img
               src={project.mainImage}
               alt={project.title}
-              className="w-full h-96 object-cover rounded-md"
+              className="w-full h-96 max-sm:h-full object-cover rounded-md"
             />
             <div>
-              <h1 className="text-[3vw] font-semibold line-clamp-1">
+              <h1 className="text-8xl max-sm:text-4xl max-sm:mb-3 font-semibold line-clamp-1">
                 {project.title}
               </h1>
 
@@ -124,7 +124,7 @@ const ProjectDetails = () => {
                   key={index}
                   src={image}
                   alt={`Additional ${index + 1}`}
-                  className="w-full h-64 object-cover rounded-md"
+                  className="w-full h-64 max-sm:h-full object-cover rounded-md"
                 />
               ))}
             </div>
