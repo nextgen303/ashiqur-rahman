@@ -4,7 +4,8 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { HiOutlineHome } from "react-icons/hi";
 import { GoShareAndroid } from "react-icons/go";
 import Magnetic from "../components/MagnetEffect";
-import { blogs } from "../pages/Blog"; // Adjust the path as per your project structure
+import { blogs } from "../pages/Blog";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -42,15 +43,15 @@ const BlogDetails = () => {
       try {
         await navigator.share({
           title: blog.title,
-          text: 'Check out this blog post!',
-          url: window.location.href
+          text: "Check out this blog post!",
+          url: window.location.href,
         });
-        console.log('Share was successful.');
+        console.log("Share was successful.");
       } catch (error) {
-        console.log('Sharing failed:', error);
+        console.log("Sharing failed:", error);
       }
     } else {
-      console.log('Web Share API is not supported in this browser.');
+      console.log("Web Share API is not supported in this browser.");
     }
   };
 
@@ -90,10 +91,17 @@ const BlogDetails = () => {
           </div>
         </div>
 
-        <div className="fixed max-md:px-3 px-20 bottom-[15px] right-0 z-50">
-              <a href="/blog" className=" bg-[#88FE02] px-5 py-2 text-center text-sm font-medium rounded-md">All Blogs</a>
-            </div>
-
+        <div className="fixed max-md:px-3 px-20 bottom-[20px] max-md:bottom-[15px]  right-0 z-50">
+          <a
+            href="/blog"
+            className=" flex items-center gap-2 justify-end bg-[#88FE02] hover:bg-black transition-all duration-200 hover:text-white px-4 py-1 text-center text-[16px] max-md:text-[16px] font-medium rounded-md"
+          >
+            All Blogs
+            <span className="text-[18px] mt-1">
+              <FiArrowUpRight />
+            </span>
+          </a>
+        </div>
 
         <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 w-[80%] mx-auto text-center pt-28">
           {blog.title}

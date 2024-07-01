@@ -5,6 +5,7 @@ import { FiGithub } from "react-icons/fi";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { HiOutlineHome } from "react-icons/hi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const projects = [
   {
@@ -198,10 +199,17 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          <div className="fixed max-md:px-3 px-20 bottom-[15px] right-0 z-50">
-              <a href="/project" className=" bg-[#88FE02] px-5 py-2 text-center text-sm font-medium rounded-md">All projects</a>
-            </div>
-
+          <div className="fixed max-md:px-3 px-20 bottom-[20px] max-md:bottom-[15px]  right-0 z-50">
+          <a
+            href="/projects"
+            className=" flex items-center gap-2 justify-end bg-[#88FE02] hover:bg-black transition-all duration-200 hover:text-white px-4 py-1 text-center text-[16px] max-md:text-[16px] font-medium rounded-md"
+          >
+            All Projects
+            <span className="text-[18px] mt-1">
+              <FiArrowUpRight />
+            </span>
+          </a>
+        </div>
 
           <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 text-center pt-28">
             {project.title}

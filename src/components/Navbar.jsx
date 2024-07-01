@@ -19,23 +19,23 @@ const Navbar = () => {
 
         <ul className="flex items-center gap-14 max-md:hidden">
           <Magnetic>
-            <li className="hover:text-[#88FE02]">
+            <li className="hover:text-[#202020af]">
               <Link to="/">Home</Link>
             </li>
           </Magnetic>
           <Magnetic>
-            <li className="hover:text-[#88FE02]">
+            <li className="hover:text-[#202020af]">
               <Link to="/about">About</Link>
             </li>
           </Magnetic>
 
           <Magnetic>
-            <li className="hover:text-[#88FE02]">
+            <li className="hover:text-[#202020af]">
               <Link to="/project">Projects</Link>
             </li>
           </Magnetic>
           <Magnetic>
-            <li className="hover:text-[#88FE02]">
+            <li className="hover:text-[#202020af]">
               <Link to="/blog">Blog</Link>
             </li>
           </Magnetic>
