@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 const About = () => {
   return (
-    <div className="bg-white mb-[350px]">
+    <div className="bg-[#F3F3F5] mb-[350px]">
       <div className="max-w-screen-xl mx-auto px-4 py-12 -mt-5">
         <div className="flex flex-col items-center justify-center mb-12">
 

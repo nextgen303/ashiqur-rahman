@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { links, footerLinks } from "./data";
 import { perspective, slideIn } from "./anim";
 
-export default function Index() {
+export default function Nav({ onLinkClick }) {
   return (
     <div className={styles.nav}>
       <div className={styles.body}>
@@ -20,7 +20,11 @@ export default function Index() {
                 animate="enter"
                 exit="exit"
               >
-                <Link to={href} className={styles.link}>
+                <Link
+                  to={href}
+                  className={styles.link}
+                  onClick={onLinkClick}
+                >
                   {title}
                 </Link>
               </motion.div>
@@ -40,6 +44,7 @@ export default function Index() {
               animate="enter"
               exit="exit"
               key={`f_${i}`}
+              onClick={onLinkClick}
             >
               {title}
             </motion.a>

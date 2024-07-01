@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 // Sample project data
-const projects = [
+export const projects = [
   {
     id: 1,
     title: "Digital Artworks",

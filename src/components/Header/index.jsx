@@ -28,8 +28,12 @@ const menu = {
   },
 };
 
-export default function Index() {
+export default function ParentComponent() {
   const [isActive, setIsActive] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsActive(false);
+  };
 
   return (
     <div className={styles.header}>
@@ -39,7 +43,9 @@ export default function Index() {
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence>
+          {isActive && <Nav onLinkClick={handleLinkClick} />}
+        </AnimatePresence>
       </motion.div>
       <Button
         isActive={isActive}

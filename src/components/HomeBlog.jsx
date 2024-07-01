@@ -1,57 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { blogs } from "../pages/Blog";
 
-
-const blogs = [
-  {
-    id: 1,
-    title: "Understanding React",
-    excerpt:
-      "Dive deep into React hooks and learn how they can simplify your code.",
-    image: "https://cdn.dribbble.com/userupload/14201875/file/original-33bea8e504041e7872757db29f846f35.png?resize=1200x900",
-    date: "12 April 2024",
-  },
-  {
-    id: 2,
-    title: "CSS Grid Layout",
-    excerpt:
-      "Learn the fundamentals of CSS Grid Layout to build modern web layouts.",
-    image: "https://i.pinimg.com/564x/80/44/72/804472a8dbdc553623b7e3d3c6033b0f.jpg",
-    date: "10 April 2024",
-  },
-  {
-    id: 3,
-    title: "JavaScript ES6 Features You Need to Know",
-    excerpt:
-      "Explore the most important features introduced in ES6 and how to use them.",
-    image: "https://i.pinimg.com/564x/fe/8f/ee/fe8feee9582495bcac65cc39c06fbf47.jpg",
-    date: "8 April 2024",
-  },
-  {
-    id: 4,
-    title: "Building RESTful APIs with Node.js",
-    excerpt:
-      "A step-by-step guide to building RESTful APIs using Node.js and Express.",
-    image: "https://i.pinimg.com/564x/bc/90/c8/bc90c8c08fd41f04bff22526a8e4c92f.jpg",
-    date: "6 April 2024",
-  },
-  {
-    id: 5,
-    title: "Introduction to TypeScript",
-    excerpt:
-      "Learn how TypeScript can improve your JavaScript code with static typing.",
-    image: "https://i.pinimg.com/564x/bf/a4/d1/bfa4d1334131089d85bf9d6be7bb305a.jpg",
-    date: "4 April 2024",
-  },
-  {
-    id: 6,
-    title: "Mastering Git and GitHub",
-    excerpt:
-      "Understand the fundamentals of Git and GitHub for version control.",
-    image:"https://i.pinimg.com/564x/64/e8/07/64e807dd7ab3027ca0895ba1a10a7266.jpg",
-    date: "2 April 2024",
-  },
-];
 const HomeBlog = () => {
   return (
     <div className="bg-[#F3F3F5]">

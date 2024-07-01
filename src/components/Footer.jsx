@@ -5,9 +5,10 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-black text-white min-h-max pb-10 w-full -z-50 overflow-hidden">
+    <div className="fixed bottom-0 left-0 right-0 bg-black text-white min-h-max pb-10 max-sm:pb-4 w-full -z-50 overflow-hidden">
       <div className="rows pt-10 max-w-screen-2xl mx-auto px-20 flex justify-between gap-6 flex-wrap max-sm:px-3 max-sm:flex-col">
-        <div className="one">
+      <div className="max-sm:flex max-sm:justify-between flex gap-16 max-sm:gap-2">
+       <div className="one">
           <Magnetic>
             <a href="/">
               <svg
@@ -41,7 +42,7 @@ const Footer = () => {
 
           <p className="mt-4">Expert Frontend Web Developer</p>
 
-          <div className="flex items-start gap-5 pt-4">
+          <div className="flex items-start gap-5 pt-4 ">
             <Magnetic>
               <a href="#" className="text-2xl">
                 <BsFacebook />
@@ -70,7 +71,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="two">
+        <div className="two max-sm:hidden">
           <h1 className="text-xl">Quick Links</h1>
           <div className="flex flex-col gap-2 pt-5">
             <Magnetic>
@@ -87,7 +88,9 @@ const Footer = () => {
             </Magnetic>
           </div>
         </div>
+       </div>
 
+        <div className="max-sm:flex max-sm:justify-between flex gap-16 max-sm:gap-2 max-sm:pt-5">
         <div className="three">
           <h1 className="text-xl">Resources</h1>
           <div className="flex flex-col gap-2 pt-5">
@@ -122,6 +125,7 @@ const Footer = () => {
               <a href="/sitemap">Sitemap</a>
             </Magnetic>
           </div>
+        </div>
         </div>
       </div>
 

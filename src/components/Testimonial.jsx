@@ -26,7 +26,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className=" rounded-bl-[20px] rounded-br-[20px] pb-20 bg-[#F3F3F5]">
+    <div className="  bg-[#F3F3F5] pb-12">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
         <div className="text-gray-600 pt-8" id="testimonials">
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
@@ -49,8 +49,12 @@ const Testimonial = () => {
                       loading="lazy"
                     />
                     <div>
-                      <h6 className="text-lg font-medium text-gray-700">{testimonial.name}</h6>
-                      <p className="text-sm text-gray-500 ">{testimonial.role}</p>
+                      <h6 className="text-lg font-medium text-gray-700">
+                        {testimonial.name}
+                      </h6>
+                      <p className="text-sm text-gray-500 ">
+                        {testimonial.role}
+                      </p>
                     </div>
                   </div>
                   <p className="mt-8">{testimonial.content}</p>
@@ -61,8 +65,6 @@ const Testimonial = () => {
         </div>
       </div>
     </div>
-
-    
   );
 };
 
