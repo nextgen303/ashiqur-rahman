@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { HiOutlineHome } from "react-icons/hi";
+import { GoShareAndroid } from "react-icons/go";
 import Magnetic from "../components/MagnetEffect";
 import { blogs } from "../pages/Blog"; // Adjust the path as per your project structure
 
@@ -39,7 +40,7 @@ const BlogDetails = () => {
   return (
     <div className="bg-[#ffffff] z-50 relative">
       <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3 relative">
-        <div className="mx-auto bg-white fixed max-w-screen-2xl px-20 max-md:px-3 py-4 left-0 right-0">
+        <div className="mx-auto bg-white flex items-center justify-between fixed max-w-screen-2xl px-20 max-md:px-3 py-3 left-0 right-0 z-50">
           <div className="flex items-center gap-3 ">
             <Magnetic>
               <button
@@ -58,6 +59,17 @@ const BlogDetails = () => {
               </a>
             </Magnetic>
           </div>
+
+          <div className="link">
+              <Magnetic>
+                <a
+                  className="text-2xl  hover:text-[#9DA0A3] duration-150"
+                  href=""
+                >
+                <GoShareAndroid />
+                </a>
+              </Magnetic>
+            </div>
         </div>
 
         <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 w-[80%] mx-auto text-center pt-28">
