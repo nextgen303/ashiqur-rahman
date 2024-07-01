@@ -1,90 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { MdOutlineArrowBackIosNew } from 'react-icons/md';
-import Magnetic from '../components/MagnetEffect';
-import { HiOutlineHome } from 'react-icons/hi2';
-
-const blogs = [
-  {
-    id: 1,
-    title: 'Web Development Roadmap 2024',
-    image: 'https://i.pinimg.com/564x/bd/53/66/bd5366fc6adf20de0c45778e7218110b.jpg',
-    content: `As we step into 2024, the web development landscape continues to evolve at a rapid pace. This roadmap aims to guide aspiring and experienced developers alike through the essential skills and technologies to focus on for the coming year.
-
-### 1. Core Fundamentals
-#### HTML & CSS
-Mastering HTML5 and CSS3 is the foundation of web development. Understand semantic markup, accessibility, and responsive design principles to create robust web pages.
-
-#### JavaScript
-JavaScript remains a critical skill for web developers. In 2024, focus on ES6+ features, asynchronous programming with Promises and async/await, and the latest updates in the language.
-
-### 2. Frontend Frameworks & Libraries
-#### React.js
-React.js continues to dominate the frontend landscape. Learn about React hooks, context API, and the latest React features. State management with Redux or Context API is also crucial.
-
-#### Vue.js & Angular
-While React is prevalent, Vue.js and Angular remain important. Vue 3’s composition API and Angular’s robust architecture are key areas to explore.
-
-### 3. Backend Development
-#### Node.js
-Node.js is indispensable for backend development. Understand Express.js for building RESTful APIs and dive into serverless architecture with AWS Lambda or Azure Functions.
-
-#### Databases
-Learn both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, Firebase) databases. GraphQL is also gaining traction for its flexible querying capabilities.
-
-### 4. DevOps & CI/CD
-Continuous Integration and Continuous Deployment (CI/CD) are crucial for modern web development. Familiarize yourself with tools like Jenkins, GitHub Actions, and Docker for containerization.
-
-### 5. Version Control
-Proficiency in Git is non-negotiable. Understanding branching strategies, pull requests, and collaboration via platforms like GitHub or GitLab is essential.
-
-### 6. Testing
-Automated testing ensures code reliability. Learn about unit testing with Jest, integration testing, and end-to-end testing with tools like Cypress.
-
-### 7. Security
-Web security is paramount. Understand common vulnerabilities (e.g., XSS, CSRF) and implement security best practices in your applications.
-
-### 8. Performance Optimization
-Performance is key to user experience. Learn about lazy loading, code splitting, and optimizing images and assets.
-
-### 9. Emerging Trends
-#### WebAssembly
-WebAssembly (Wasm) allows high-performance code execution in the browser. Explore its use cases and how it can complement JavaScript.
-<br/>
-#### Jamstack
-Jamstack architecture (JavaScript, APIs, Markup) is gaining popularity for its scalability and performance benefits. Understand static site generators like Gatsby and Next.js.
-
-### 10. Soft Skills
-Beyond technical skills, effective communication, teamwork, and problem-solving abilities are crucial. Invest time in developing these soft skills to enhance your career prospects.
-
-By following this roadmap, you can stay ahead in the ever-changing field of web development and build cutting-edge applications in 2024.`,
-    features: ['HTML & CSS', 'JavaScript', 'React.js', 'Node.js', 'Git', 'Testing', 'Security']
-  },
-  {
-    id: 2,
-    title: 'Blog Post Two',
-    image: 'https://i.pinimg.com/564x/92/db/4f/92db4f1026f395298352e299ce823484.jpg',
-    content: 'This is the detailed content for blog post two.',
-    features: ['Feature A', 'Feature B', 'Feature C']
-  },
-  {
-    id: 3,
-    title: 'Blog Post Three',
-    image: 'https://i.pinimg.com/564x/61/b1/bc/61b1bce711f227e7c3d5a34d663b8df5.jpg',
-    content: 'This is the detailed content for blog post three.',
-    features: ['Feature A', 'Feature B', 'Feature C']
-  },
-];
-
-
-const shuffleArray = (array) => {
-  let shuffledArray = array.slice();
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
-  return shuffledArray;
-};
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
+import { HiOutlineHome } from "react-icons/hi";
+import Magnetic from "../components/MagnetEffect";
+import { blogs } from "../pages/Blog"; // Adjust the path as per your project structure
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -95,7 +14,9 @@ const BlogDetails = () => {
 
   useEffect(() => {
     if (blog) {
-      const shuffledBlogs = shuffleArray(blogs.filter((b) => b.id !== blog.id));
+      const shuffledBlogs = blogs
+        .filter((b) => b.id !== blog.id)
+        .sort(() => 0.5 - Math.random());
       setRelatedBlogs(shuffledBlogs.slice(0, 3));
     }
   }, [id]);
@@ -108,6 +29,12 @@ const BlogDetails = () => {
       </div>
     );
   }
+
+  // Function to strip HTML tags for excerpt
+  const stripHTML = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent || "";
+  };
 
   return (
     <div className="bg-[#ffffff] z-50">
@@ -134,7 +61,7 @@ const BlogDetails = () => {
             </div>
           </div>
 
-          <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 text-center pt-12">
+          <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 w-[80%] mx-auto text-center pt-12">
             {blog.title}
           </h1>
 
@@ -145,7 +72,10 @@ const BlogDetails = () => {
               className="w-full h-96 max-sm:h-full object-cover rounded-md"
             />
             <div>
-              <p className="text-xl text-gray-700 mb-4">{blog.content}</p>
+              <div
+                className="text-xl text-gray-700 mb-4"
+                dangerouslySetInnerHTML={{ __html: blog.content }}
+              ></div>
               <h3 className="text-2xl font-semibold mb-2">Features:</h3>
               <ul className="list-disc list-inside text-lg text-gray-600 mb-4">
                 {blog.features.map((feature, index) => (
@@ -156,7 +86,9 @@ const BlogDetails = () => {
           </div>
 
           <div className="mb-8 mt-32">
-            <h3 className="text-6xl font-semibold mb-12">Related Blog Posts:</h3>
+            <h3 className="text-6xl font-semibold mb-12">
+              Related Blog Posts:
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedBlogs.map((relatedBlog) => (
                 <div
@@ -173,7 +105,7 @@ const BlogDetails = () => {
                       {relatedBlog.title}
                     </h2>
                     <p className="text-gray-600 mb-4">
-                      {relatedBlog.content.slice(0, 100)}...
+                      {stripHTML(relatedBlog.content).slice(0, 200)}...
                     </p>
                     <a
                       href={`/blog/${relatedBlog.id}`}
@@ -193,4 +125,3 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
-

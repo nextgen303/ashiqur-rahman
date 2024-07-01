@@ -1,8 +1,12 @@
+// Blog.js
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 // Sample blog data
-const blogs = [
+// Blog.js
+
+export const blogs = [
   {
     id: 1,
     title: "Mastering React Hooks",
@@ -10,6 +14,22 @@ const blogs = [
       "Explore advanced techniques with React hooks for state management and side effects.",
     image: "https://i.ibb.co/DYxtCJq/img-1.png",
     date: "12 April 2024",
+    content: `
+      <p>In this comprehensive guide, we delve deep into mastering React hooks. Covering advanced techniques for state management and handling side effects, you'll learn how to leverage useState, useEffect, useContext, and more effectively.</p>
+      <p>Topics covered include:</p>
+      <ul>
+        <li>Understanding the useState hook for managing component state</li>
+        <li>Effectively using useEffect for handling side effects</li>
+        <li>Context API and how to manage global state with useContext</li>
+        <li>Custom hooks and their role in code reusability</li>
+      </ul>
+      <p>By the end of this guide, you'll be equipped with the knowledge to build complex React applications using hooks, enhancing both performance and code maintainability.</p>
+    `,
+    features: [
+      "State management with useState",
+      "Side effects with useEffect",
+      "Global state with useContext",
+    ],
   },
   {
     id: 2,
@@ -18,6 +38,22 @@ const blogs = [
       "Learn everything you need to know about CSS Grid Layouts and create stunning web designs.",
     image: "https://i.ibb.co/3C5HvxC/img-2.png",
     date: "10 April 2024",
+    content: `
+      <p>CSS Grid Layouts offer a powerful way to design web layouts with precision and flexibility. This guide covers everything from the basics to advanced techniques, ensuring you master CSS Grids for modern web design.</p>
+      <p>Key topics covered:</p>
+      <ul>
+        <li>Understanding the grid container and grid items</li>
+        <li>Creating responsive layouts with auto-fit and minmax</li>
+        <li>Using grid-template-areas for complex layout structures</li>
+        <li>Advanced techniques like grid-gap, grid-auto-flow, and more</li>
+      </ul>
+      <p>Whether you're a beginner or looking to enhance your skills, CSS Grid: The Complete Guide will empower you to create visually stunning and responsive web designs.</p>
+    `,
+    features: [
+      "Basic to advanced grid layout techniques",
+      "Responsive design with CSS Grid",
+      "Creating complex layouts",
+    ],
   },
   {
     id: 3,
@@ -26,6 +62,22 @@ const blogs = [
       "Discover the latest features in JavaScript ES6 and beyond, including async/await and destructuring.",
     image: "https://i.ibb.co/Ms4qyXp/img-3.png",
     date: "8 April 2024",
+    content: `
+      <p>JavaScript ES6 introduced several new features and enhancements that significantly improve developer productivity and code readability. This guide explores the key features of ES6 and beyond.</p>
+      <p>Topics include:</p>
+      <ul>
+        <li>Arrow functions and their advantages over traditional function syntax</li>
+        <li>Template literals for more readable string interpolation</li>
+        <li>Async/await for asynchronous programming</li>
+        <li>Destructuring assignments and their role in simplifying object and array manipulations</li>
+      </ul>
+      <p>Stay ahead in JavaScript development by mastering these essential features and leveraging them in your projects effectively.</p>
+    `,
+    features: [
+      "Arrow functions and template literals",
+      "Async/await for asynchronous programming",
+      "Destructuring assignments",
+    ],
   },
   {
     id: 4,
@@ -34,6 +86,22 @@ const blogs = [
       "Learn industry best practices for building RESTful APIs with Node.js and Express.",
     image: "https://i.ibb.co/6Wfjf2w/img-4.png",
     date: "6 April 2024",
+    content: `
+      <p>Building RESTful APIs with Node.js and Express.js is a fundamental skill for backend developers. This guide covers best practices, design patterns, and tips for creating scalable and maintainable APIs.</p>
+      <p>Key topics covered:</p>
+      <ul>
+        <li>Setting up a Node.js server with Express</li>
+        <li>Routing and middleware for handling requests</li>
+        <li>CRUD operations with MongoDB using Mongoose</li>
+        <li>Authentication and authorization strategies</li>
+      </ul>
+      <p>Whether you're starting with Node.js or looking to refine your API development skills, this guide provides practical insights and techniques.</p>
+    `,
+    features: [
+      "Setting up Node.js with Express",
+      "CRUD operations with MongoDB",
+      "Authentication and authorization",
+    ],
   },
   {
     id: 5,
@@ -42,6 +110,22 @@ const blogs = [
       "Get started with TypeScript and leverage its powerful static typing features for cleaner code.",
     image: "https://i.ibb.co/3yvZBpm/img-5.png",
     date: "4 April 2024",
+    content: `
+      <p>TypeScript is a superset of JavaScript that adds static types to the language, enhancing code quality and developer productivity. This guide covers the fundamentals of TypeScript and its key features.</p>
+      <p>Topics include:</p>
+      <ul>
+        <li>Understanding TypeScript syntax and type annotations</li>
+        <li>Type inference and how it simplifies code development</li>
+        <li>Interfaces and classes for defining custom types and structures</li>
+        <li>TypeScript compiler and configuration</li>
+      </ul>
+      <p>Start writing more reliable and scalable JavaScript applications with TypeScript's powerful features and static type checking.</p>
+    `,
+    features: [
+      "TypeScript syntax and type annotations",
+      "Interfaces and classes",
+      "Type inference",
+    ],
   },
   {
     id: 6,
@@ -50,14 +134,33 @@ const blogs = [
       "Master version control with Git and GitHub, including branching, merging, and pull requests.",
     image: "https://i.ibb.co/gDdnJb5/img-6.png",
     date: "2 April 2024",
+    content: `
+      <p>Git is the industry-standard version control system used by developers worldwide. This guide covers essential Git commands, GitHub features, and best practices for collaborative software development.</p>
+      <p>Key topics covered:</p>
+      <br/>
+      <ul>
+        <li>1. Setting up a Git repository and initializing version control</li>
+
+        <li>2. Branching, merging, and resolving conflicts</li>
+        <li>3. Pull requests and code review workflows on GitHub</li>
+        <li> 4. Collaboration strategies and team workflows</li>
+      </ul>
+      <br/>
+      <p>Enhance your development workflow and collaboration skills with Git and GitHub Essentials, ensuring efficient and error-free code management.</p>
+    `,
+    features: [
+      "Setting up Git repositories",
+      "Branching and merging",
+      "Collaborative workflows with GitHub",
+    ],
   },
 ];
 
 const Blog = () => {
   return (
-    <div className=" text-gray-200 h-full py-12 pb-20">
-      <div className=" mx-auto px-4 max-w-7xl">
-        <h1 className="text-4xl font-bold text-gray-200 mb-8">
+    <div className="text-gray-200 h-full py-12 pb-20">
+      <div className="mx-auto px-4 max-w-7xl">
+        <h1 className="text-4xl font-bold text-black mb-8">
           Latest Blog Posts
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -72,10 +175,10 @@ const Blog = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h2 className="text-xl font-bold text-gray-100 mb-2">
+                <h2 className="text-xl font-bold text-gray-800 mb-2">
                   {blog.title}
                 </h2>
-                <p className="text-gray-400 mb-4">{blog.excerpt}</p>
+                <p className="text-gray-600 mb-4">{blog.excerpt}</p>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-gray-500">{blog.date}</p>
                   <Link
@@ -89,87 +192,6 @@ const Blog = () => {
             </div>
           ))}
         </div>
-
-        <section className="flex flex-col justify-center mx-auto  bg-white text-black mt-12 ">
-          <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
-            {/* Blog post */}
-            <article className="max-w-sm mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
-              <a className="relative block group" href="#0">
-                <div
-                  className="absolute inset-0 bg-gray-800 hidden md:block transform md:translate-y-2 md:translate-x-4 xl:translate-y-4 xl:translate-x-8 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out pointer-events-none"
-                  aria-hidden="true"
-                ></div>
-                <figure className="relative h-0 pb-[56.25%] md:pb-[75%] lg:pb-[56.25%] overflow-hidden transform md:-translate-y-2 xl:-translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700 ease-out">
-                  <img
-                    className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out"
-                    src="https://preview.cruip.com/open-pro/images/blog-post-01.jpg"
-                    width="540"
-                    height="303"
-                    alt="Blog post"
-                  />
-                </figure>
-              </a>
-              <div>
-                <header>
-                  <div className="mb-3">
-                    <ul className="flex flex-wrap text-xs font-medium -m-1">
-                      <li className="m-1">
-                        <a
-                          className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out"
-                          href="#0"
-                        >
-                          Product
-                        </a>
-                      </li>
-                      <li className="m-1">
-                        <a
-                          className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-blue-500 hover:bg-blue-600 transition duration-150 ease-in-out"
-                          href="#0"
-                        >
-                          Engineering
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
-                    <a
-                      className="hover:text-gray-100 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      Designing a functional workflow at home.
-                    </a>
-                  </h3>
-                </header>
-                <p className="text-lg text-gray-400 flex-grow">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat.
-                </p>
-                <footer className="flex items-center mt-4">
-                  <a href="#0">
-                    <img
-                      className="rounded-full flex-shrink-0 mr-4"
-                      src="https://preview.cruip.com/open-pro/images/news-author-04.jpg"
-                      width="40"
-                      height="40"
-                      alt="Author 04"
-                    />
-                  </a>
-                  <div>
-                    <a
-                      className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      Chris Solerieu
-                    </a>
-                    <span className="text-gray-700"> - </span>
-                    <span className="text-gray-500">Jan 19, 2020</span>
-                  </div>
-                </footer>
-              </div>
-            </article>
-          </div>
-        </section>
       </div>
     </div>
   );

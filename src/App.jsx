@@ -61,7 +61,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="select-none">
+    <div className="select-non">
       <Router>
         {loading && <Preloader setLoading={setLoading} />}
         <AppContent setLoading={setLoading} />
