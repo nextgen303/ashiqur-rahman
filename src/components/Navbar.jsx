@@ -44,7 +44,7 @@ const Navbar = () => {
         <Magnetic>
           <a
             href=""
-            className="bg-[#000000f5] text-white hover:bg-[#88FE02] hover:text-black w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
+            className="bg-[#000000f5] box-shadow-custom text-white hover:bg-[#88FE02] hover:text-black w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
           >
             Contact
             <span className="mt-[2px]">
