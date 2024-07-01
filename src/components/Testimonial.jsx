@@ -26,12 +26,12 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className=" rounded-bl-[20px] rounded-br-[20px] pb-20">
+    <div className=" rounded-bl-[20px] rounded-br-[20px] pb-20 bg-[#F3F3F5]">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
-        <div className="text-gray-600 dark:text-gray-300 pt-8" id="testimonials">
+        <div className="text-gray-600 pt-8" id="testimonials">
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="mb-10 space-y-4 px-6 md:px-0">
-              <h2 className="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+              <h2 className="text-center text-2xl font-bold text-gray-800  md:text-4xl">
                 Hear from our happy customers.
               </h2>
             </div>
@@ -39,7 +39,7 @@ const Testimonial = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none"
+                  className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10 dark:shadow-none"
                 >
                   <div className="flex gap-4">
                     <img
@@ -49,8 +49,8 @@ const Testimonial = () => {
                       loading="lazy"
                     />
                     <div>
-                      <h6 className="text-lg font-medium text-gray-700 dark:text-white">{testimonial.name}</h6>
-                      <p className="text-sm text-gray-500 dark:text-gray-300">{testimonial.role}</p>
+                      <h6 className="text-lg font-medium text-gray-700">{testimonial.name}</h6>
+                      <p className="text-sm text-gray-500 ">{testimonial.role}</p>
                     </div>
                   </div>
                   <p className="mt-8">{testimonial.content}</p>

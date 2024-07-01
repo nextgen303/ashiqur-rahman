@@ -132,7 +132,7 @@ const Footer = () => {
           <Magnetic>
             <a
               href="#"
-              className="bg-white text-black rounded-sm text-md font-semibold px-3 py-1 hover:bg-orange-700 transition-all duration-600"
+              className="bg-white text-black rounded-sm text-md font-semibold px-3 py-1 hover:bg-[#88FE02] transition-all duration-600"
             >
               Back to top
             </a>

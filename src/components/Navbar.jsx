@@ -13,29 +13,29 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="max-w-screen-2xl bg-white px-20 max-sm:!px-3 max-xl:px-10 mx-auto py-3 max-md:py-2 relative transition-transform duration-300 z-40">
+    <nav className="max-w-screen-2xl bg-[#F3F3F5] px-20 max-sm:!px-3 max-xl:px-10 mx-auto py-3 max-md:py-2 relative transition-transform duration-300 z-40">
       <div className="border-b border-black/5 max-md:border-none flex items-center justify-between pb-3">
         <Logo />
 
         <ul className="flex items-center gap-14 max-md:hidden">
           <Magnetic>
-            <li className="hover:text-[#9DA0A3]">
+            <li className="hover:text-[#88FE02]">
               <Link to="/">Home</Link>
             </li>
           </Magnetic>
           <Magnetic>
-            <li className="hover:text-[#9DA0A3]">
+            <li className="hover:text-[#88FE02]">
               <Link to="/about">About</Link>
             </li>
           </Magnetic>
 
           <Magnetic>
-            <li className="hover:text-[#9DA0A3]">
+            <li className="hover:text-[#88FE02]">
               <Link to="/project">Projects</Link>
             </li>
           </Magnetic>
           <Magnetic>
-            <li className="hover:text-[#9DA0A3]">
+            <li className="hover:text-[#88FE02]">
               <Link to="/blog">Blog</Link>
             </li>
           </Magnetic>
@@ -44,9 +44,9 @@ const Navbar = () => {
         <Magnetic>
           <a
             href=""
-            className="bg-[#000000f5] text-white hover:bg-[#9DA0A3] hover:text-black w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
+            className="bg-[#000000f5] text-white hover:bg-[#88FE02] hover:text-black w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
           >
-            Contact{" "}
+            Contact
             <span className="mt-[2px]">
               <GoArrowRight />
             </span>

@@ -136,7 +136,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="bg-white mb-[350px] px-0 pb-20 pt-10">
+    <div className="bg-[#F3F3F5] mb-[350px] px-0 pb-20 pt-10">
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:px-3 mx-auto">
         <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

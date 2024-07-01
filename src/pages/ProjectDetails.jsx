@@ -13,11 +13,7 @@ const projects = [
     mainImage:
       "https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg",
     description: "This is a description for project one.",
-    features: [
-      "Smooth Scrolling",
-      "Responsive Design",
-      "Feature 3"
-    ],
+    features: ["Smooth Scrolling", "Responsive Design", "Feature 3"],
     additionalImages: [
       "https://via.placeholder.com/800x400.png?text=Additional+Image+1",
       "https://via.placeholder.com/800x400.png?text=Additional+Image+2",
@@ -160,32 +156,31 @@ const ProjectDetails = () => {
 
   return (
     <div className="bg-[#ffffff] z-50">
-      <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3">
+      <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3 relative">
         <div className="bg-[#ffffff81] rounded-lg">
-          <div className="links flex items-center justify-between gap-5 fixed w-full left-0 right-0 bg-white py-3 px-20 max-md:px-2 z-50">
-          <div className="flex items-center gap-3 ">
-            <Magnetic>
-              <button
-                onClick={() => navigate(-1)}
-                className="w-8 h-8 bg-black/10 text-2xl flex items-center justify-center text-black p-[6px] rounded-full hover:bg-[#9DA0A3] hover:text-black duration-150"
-              >
-                <MdOutlineArrowBackIosNew />
-              </button>
-            </Magnetic>
-            <Magnetic>
-              <a
-                className="text-xl flex items-center gap-1 bg-black/10 text-black px-5 py-1 rounded-full hover:bg-[#9DA0A3] duration-150"
-                href="/"
-              >
-                <HiOutlineHome /> <span className="text-[16px]">Home</span>
-              </a>
-            </Magnetic>
-          </div>
-
+          <div className="links flex items-center justify-between gap-5 fixed w-full left-0 right-0 bg-white py-5 max-md:py-3 px-20 max-md:px-2 z-50">
+            <div className="flex items-center gap-3 ">
+              <Magnetic>
+                <button
+                  onClick={() => navigate(-1)}
+                  className="w-8 h-8 bg-black/10 text-2xl flex items-center justify-center text-black p-[6px] rounded-full hover:bg-[#9DA0A3] hover:text-black duration-150"
+                >
+                  <MdOutlineArrowBackIosNew />
+                </button>
+              </Magnetic>
+              <Magnetic>
+                <a
+                  className="text-xl flex items-center gap-1 bg-black/10 text-black px-5 py-1 rounded-full hover:bg-[#9DA0A3] duration-150"
+                  href="/"
+                >
+                  <HiOutlineHome /> <span className="text-[16px]">Home</span>
+                </a>
+              </Magnetic>
+            </div>
             <div className="link flex items-center gap-6">
               <Magnetic>
                 <a
-                  className="text-xl  hover:text-[#9DA0A3] duration-150"
+                  className="text-[22px]  hover:text-[#9DA0A3] duration-150"
                   href=""
                 >
                   <FiGithub />
@@ -194,7 +189,7 @@ const ProjectDetails = () => {
 
               <Magnetic>
                 <a
-                  className="text-xl  hover:text-[#9DA0A3] duration-150"
+                  className="text-2xl  hover:text-[#9DA0A3] duration-150"
                   href=""
                 >
                   <HiOutlineExternalLink />
@@ -202,6 +197,11 @@ const ProjectDetails = () => {
               </Magnetic>
             </div>
           </div>
+
+          <div className="fixed max-md:px-3 px-20 bottom-[15px] right-0 z-50">
+              <a href="/project" className=" bg-[#88FE02] px-5 py-2 text-center text-sm font-medium rounded-md">All projects</a>
+            </div>
+
 
           <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 text-center pt-28">
             {project.title}

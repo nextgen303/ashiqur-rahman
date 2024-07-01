@@ -37,6 +37,23 @@ const BlogDetails = () => {
     return doc.body.textContent || "";
   };
 
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: blog.title,
+          text: 'Check out this blog post!',
+          url: window.location.href
+        });
+        console.log('Share was successful.');
+      } catch (error) {
+        console.log('Sharing failed:', error);
+      }
+    } else {
+      console.log('Web Share API is not supported in this browser.');
+    }
+  };
+
   return (
     <div className="bg-[#ffffff] z-50 relative">
       <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3 relative">
@@ -61,16 +78,22 @@ const BlogDetails = () => {
           </div>
 
           <div className="link">
-              <Magnetic>
-                <a
-                  className="text-2xl  hover:text-[#9DA0A3] duration-150"
-                  href=""
-                >
+            <Magnetic>
+              <a
+                className="text-2xl hover:text-[#9DA0A3] duration-150"
+                onClick={handleShare}
+                href="#"
+              >
                 <GoShareAndroid />
-                </a>
-              </Magnetic>
-            </div>
+              </a>
+            </Magnetic>
+          </div>
         </div>
+
+        <div className="fixed max-md:px-3 px-20 bottom-[15px] right-0 z-50">
+              <a href="/blog" className=" bg-[#88FE02] px-5 py-2 text-center text-sm font-medium rounded-md">All Blogs</a>
+            </div>
+
 
         <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 w-[80%] mx-auto text-center pt-28">
           {blog.title}
