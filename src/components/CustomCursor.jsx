@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -14,47 +14,47 @@ const CustomCursor = () => {
         x: e.clientX,
         y: e.clientY,
         duration: 0.2,
-        ease: 'power2.out',
+        ease: "power2.out",
       });
 
       gsap.to(follower, {
         x: e.clientX,
         y: e.clientY,
         duration: 0.6,
-        ease: 'power2.out',
+        ease: "power2.out",
       });
     };
 
     const handleMouseEnter = () => {
       gsap.to(cursor, {
         scale: 1.8,
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
         duration: 0.3,
-        ease: 'power2.out',
+        ease: "power2.out",
       });
     };
 
     const handleMouseLeave = () => {
       gsap.to(cursor, {
         scale: 1,
-        backgroundColor: 'transparent',
+        backgroundColor: "transparent",
         duration: 0.3,
-        ease: 'power2.out',
+        ease: "power2.out",
       });
     };
 
-    const links = document.querySelectorAll('a');
-    links.forEach(link => {
-      link.addEventListener('mouseenter', handleMouseEnter);
-      link.addEventListener('mouseleave', handleMouseLeave);
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", handleMouseEnter);
+      link.addEventListener("mouseleave", handleMouseLeave);
     });
 
-    document.addEventListener('mousemove', moveCursor);
+    document.addEventListener("mousemove", moveCursor);
     return () => {
-      document.removeEventListener('mousemove', moveCursor);
-      links.forEach(link => {
-        link.removeEventListener('mouseenter', handleMouseEnter);
-        link.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener("mousemove", moveCursor);
+      links.forEach((link) => {
+        link.removeEventListener("mouseenter", handleMouseEnter);
+        link.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
   }, []);
@@ -63,13 +63,13 @@ const CustomCursor = () => {
     <>
       <div
         ref={cursorRef}
-        className="fixed w-5 h-5 border-1 border-black mix-blend-exclusion rounded-full pointer-events-none "
         style={{ top: 0, left: 0, zIndex: 1000 }}
       />
       <div
         ref={followerRef}
-        className="fixed w-3 h-3 bg-black rounded-full pointer-events-none max-md:hidden"
+        className="fixed w-[5px] h-[5px] bg-red-600 pointer-events-none max-md:hidden"
         style={{ top: 0, left: 0, zIndex: 999 }}
+        
       />
     </>
   );

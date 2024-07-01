@@ -140,34 +140,44 @@ const Project = () => {
       <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:px-3 mx-auto">
         <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-            >
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+          >
+            <div className="relative">
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <ul className="list-disc list-inside text-gray-600 mb-4">
-                  {project.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <Link
                   to={`/project/${project.id}`}
-                  className="inline-block text-blue-500 hover:underline"
+                  className="text-white text-lg font-bold"
                 >
-                  Learn More
+                  View Details
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
+              <p className="text-gray-600 mb-4">{project.description}</p>
+              <ul className="list-disc list-inside text-gray-600 mb-4">
+                {project.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+              <Link
+                to={`/project/${project.id}`}
+                className="inline-block mt-4 py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
       </div>
       <Footer />
     </div>
