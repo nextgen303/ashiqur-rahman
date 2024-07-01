@@ -170,9 +170,9 @@ const ProjectDetails = () => {
 
   return (
     <div className="bg-[#ffffff] z-50">
-      <div className="max-w-screen-2xl mx-auto pt-2 px-20 max-md:px-3">
-        <div className="bg-[#ffffff81] rounded-lg py-4">
-          <div className="links flex items-center justify-between gap-5">
+      <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3">
+        <div className="bg-[#ffffff81] rounded-lg">
+        <div className="mx-auto flex items-center justify-between bg-white fixed max-w-screen-2xl px-20 max-md:px-3 py-4 left-0 right-0">
             <div className="flex items-center gap-3">
               <Magnetic>
                 <button
@@ -205,7 +205,7 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 text-center pt-12">
+          <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 text-center pt-28">
             {project.title}
           </h1>
 
