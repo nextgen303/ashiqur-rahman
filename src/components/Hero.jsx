@@ -14,8 +14,8 @@ const Hero = () => {
           <div className="main flex flex-col items-center justify-center gap-4 pt-20">
           <h4 className="text-[18px]">Hi! There, i’m AshıQur Ʀahman, </h4>
 
-          <h1 className="font-custom font-black text-[11vw] max-md:text-[7vw] leading-[180px]">Web Designer </h1>
-          <h1 className=" text-[11vw] leading-[100px] max-md:text-[7vw]  font-black font-custom"> & <span className=" text-stroke font-thin">Developer</span> </h1>
+          <h1 className="font-custom text-[10vw] max-md:text-[7vw] leading-[180px]">Web Designer </h1>
+          <h1 className=" text-[10vw] leading-[100px] max-md:text-[7vw]  font-black font-custom"> & <span className=" text-stroke font-thin">Developer</span> </h1>
 
           <p className="pt-12 pb-3 text-center text-[24px]">
           I design beautifully simple things and i love what i do. <br />
