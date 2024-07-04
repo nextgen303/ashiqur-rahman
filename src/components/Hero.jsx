@@ -1,8 +1,5 @@
-import { motion } from "framer-motion";
 import React from "react";
-import HeroImg from ".././assets/images/home/hero-img.jpg";
-import { BsLinkedin, BsPinterest, BsFacebook, BsGithub } from "react-icons/bs";
-import { FaXTwitter } from "react-icons/fa6";
+import { GoArrowRight } from "react-icons/go";
 import Magnetic from "../components/MagnetEffect";
 
 const Hero = () => {
@@ -13,71 +10,30 @@ const Hero = () => {
       data-scroll-speed="-0.4"
       className="pb-28 pt-12 flex flex-col gap-12 w-full -mt-12 -z-10 bg-[#F3F3F5]"
     >
-      <div className=" max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
-        <div className="top_content text-end pt-12">
-          <h3>Web Design</h3>
-          <h3>Web Development</h3>
-          <h3>Website Speed Optimization</h3>
-        </div>
+      <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
+          <div className="main flex flex-col items-center justify-center gap-4 pt-20">
+          <h4 className="text-[18px]">Hi! There, i’m AshıQur Ʀahman, </h4>
 
-        <div className="bottom_content pt-24 flex max-sm:flex-col max-sm:items-start max-sm:gap-1  items-end justify-between gap-12">
-          <div className="left">
-            <div className="text-[9vw] max-sm:text-[70px] leading-7 font-bold flex items-center gap-4 max-md:mt-12">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: "8.5vw" }}
-                transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                className="w-[10vw] h-[6.7vw] rounded-md relative top-[0.8vw] overflow-hidden max-sm:hidden"
-              >
-                <img src={HeroImg} className="w-full h-full object-cover" />
-              </motion.div>
-              <h1>WEB</h1>
-            </div>
-            <h1 className="text-[9vw] max-sm:text-[50px] leading-[130px] font-bold">
-              DEVELOPER{" "}
-            </h1>
+          <h1 className="font-custom font-black text-[11vw] max-md:text-[7vw] leading-[180px]">Web Designer </h1>
+          <h1 className=" text-[11vw] leading-[100px] max-md:text-[7vw]  font-black font-custom"> & <span className=" text-stroke font-thin">Developer</span> </h1>
+
+          <p className="pt-12 pb-3 text-center text-[24px]">
+          I design beautifully simple things and i love what i do. <br />
+          Just simple like that!
+          </p>
+
+          <Magnetic>
+          <a
+            href=""
+            className="bg-[#000000f5] box-shadow-custom text-white w-[140px] px-6 py-2 rounded-full max-md:hidden flex items-center justify-between"
+          >
+            Let’s Talk
+            <span className="mt-[2px]">
+              <GoArrowRight />
+            </span>
+          </a>
+        </Magnetic>
           </div>
-
-          <div className="right w-[30%] max-sm:w-[100%] flex flex-col">
-            <p>
-              Let's collaborate to turn your vision into reality. <br />
-              Together, we'll create a stunning website that not only meets but
-              exceeds your expectations.
-            </p>
-
-            <div className="flex items-start gap-5 pt-4">
-              <Magnetic>
-                <a href="#" className="text-2xl">
-                  <BsFacebook />
-                </a>
-              </Magnetic>
-
-              <Magnetic>
-                <a href="#" className="text-2xl">
-                  <BsLinkedin />
-                </a>
-              </Magnetic>
-
-              <Magnetic>
-                <a href="#" className="text-2xl">
-                  <BsPinterest />
-                </a>
-              </Magnetic>
-
-              <Magnetic>
-                <a href="#" className="text-2xl">
-                  <BsGithub />
-                </a>
-              </Magnetic>
-
-              <Magnetic>
-                <a href="#" className="text-2xl">
-                  <FaXTwitter />
-                </a>
-              </Magnetic>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

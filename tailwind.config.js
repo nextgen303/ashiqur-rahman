@@ -10,6 +10,12 @@ export default {
         "max-xl": { max: "1280px" },
         "max-2xl": { max: "1536px" },
       },
+      fontFamily: {
+        custom: ['AquireBold', 'sans-serif'],
+      },
+      boxShadow: {
+        custom: '0 4px 10px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
   plugins: [],
