@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
-// Sample project data
 export const projects = [
   {
     id: 1,
     title: "Digital Artworks",
     image:
-      "https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg",
-    description: "This is a description for project one.",
+      "https://i.pinimg.com/564x/41/90/ce/4190ce13e413346bbd2679264c6e2387.jpg",
+    description: "Travel Agency Website Design",
     features: ["Smooth Scrolling", "Responsive Design", "Feature 3"],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
     additionalImages: [
       "https://via.placeholder.com/800x400.png?text=Additional+Image+1",
       "https://via.placeholder.com/800x400.png?text=Additional+Image+2",
@@ -18,11 +18,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "DAFT PUNK",
+    title: "Daft Punk",
     image:
       "https://i.pinimg.com/564x/1b/b3/02/1bb302a549e2b17feda3fc2f634920b5.jpg",
-    description: "This is a description for project two.",
+    description: "Travel Agency Website Design",
     features: ["Feature A", "Feature B", "Feature C"],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
     additionalImages: [
       "https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg",
       "https://i.pinimg.com/564x/00/b9/3f/00b93fb5b2f01ee57012b26a3df04b3c.jpg",
@@ -39,6 +40,7 @@ export const projects = [
       "Lightbox Gallery",
       "Responsive Design",
     ],
+    languages: ["HTML", "CSS", "JavaScript"],
     additionalImages: [
       "https://www.pinterest.com/pin/611293349436994680/",
       "https://i.pinimg.com/564x/c9/3d/94/c93d942bf07607f4a17c527c37f56a2c.jpg",
@@ -55,6 +57,7 @@ export const projects = [
       "Product Reviews",
       "Payment Gateway Integration",
     ],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
     additionalImages: [
       "https://i.pinimg.com/564x/62/be/b9/62beb9113e270992cf47950bd9466999.jpg",
       "https://i.pinimg.com/564x/94/f4/bb/94f4bb6465db6a07008fe3bd094eda0e.jpg",
@@ -67,6 +70,7 @@ export const projects = [
       "https://i.pinimg.com/564x/88/f2/90/88f2903e1efb197b37c9018a5fbd86f8.jpg",
     description: "A blog sharing travel experiences and guides.",
     features: ["Blog Posts", "Comment Section", "Responsive Design"],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
     additionalImages: [
       "https://i.pinimg.com/564x/88/f2/90/88f2903e1efb197b37c9018a5fbd86f8.jpg",
       "https://i.pinimg.com/564x/88/f2/90/88f2903e1efb197b37c9018a5fbd86f8.jpg",
@@ -79,6 +83,7 @@ export const projects = [
       "https://i.pinimg.com/564x/8b/6c/fb/8b6cfbabca639d0fc796338b1478192c.jpg",
     description: "Track your workouts and progress over time.",
     features: ["Workout Logging", "Progress Charts", "Responsive Design"],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
     additionalImages: [
       "https://via.placeholder.com/800x400.png?text=Fitness+Tracker+Image+1",
       "https://via.placeholder.com/800x400.png?text=Fitness+Tracker+Image+2",
@@ -95,6 +100,7 @@ export const projects = [
       "https://i.pinimg.com/564x/de/3d/99/de3d995082e64a567199371722138c70.jpg",
       "https://i.pinimg.com/564x/88/93/dc/8893dcb3459e0ec1054c687f808e7524.jpg",
     ],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
     id: 8,
@@ -107,6 +113,7 @@ export const projects = [
       "https://via.placeholder.com/800x400.png?text=News+Portal+Image+1",
       "https://via.placeholder.com/800x400.png?text=News+Portal+Image+2",
     ],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
     id: 9,
@@ -119,6 +126,7 @@ export const projects = [
       "https://via.placeholder.com/800x400.png?text=Weather+App+Image+1",
       "https://via.placeholder.com/800x400.png?text=Weather+App+Image+2",
     ],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
     id: 10,
@@ -131,46 +139,61 @@ export const projects = [
       "https://via.placeholder.com/800x400.png?text=Portfolio+Website+Image+1",
       "https://via.placeholder.com/800x400.png?text=Portfolio+Website+Image+2",
     ],
+    languages: ["HTML", "CSS", "JavaScript", "React"],
   },
 ];
 
 const Project = () => {
   return (
     <div className="bg-[#F3F3F5] mb-[350px] px-0 pb-20 pt-10">
-      <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:px-3 mx-auto">
-        <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-            >
+    <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:px-3 mx-auto">
+      <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-1">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+          >
+            <div className="relative">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-min object-cover rounded-[24px] mb-4 duration-300"
               />
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <ul className="list-disc list-inside text-gray-600 mb-4">
-                  {project.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
+  
+              <div className="absolute bottom-0 left-0 right-0 px-5 py-3 bg-gradient-to-b from-transparent to-[#00000042] overflow-hidden rounded-[18px]">
+                <div className="flex items-start flex-wrap gap-2 gap-y-3">
+                  {project.languages.map((language, index) => (
+                    <div
+                      key={index}
+                      className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[14px]"
+                    >
+                      {language}
+                    </div>
                   ))}
-                </ul>
-                <Link
-                  to={`/project/${project.id}`}
-                  className="inline-block text-blue-500 hover:underline"
-                >
-                  Learn More
-                </Link>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+  
+            <div className="flex items-center justify-between pt-3">
+              <div>
+                <h2 className="text-[22px] font-medium">{project.title}</h2>
+                <p className="text-[18px] text-[#374151] font-light">
+                  {project.description}
+                </p>
+              </div>
+              <div className="border border-[#030712] text-3xl text-gray-800 hover:bg-black hover:text-white transition-all duration-150 flex items-center px-4 rounded-full">
+                <a href={`/project/${project.id}`}>
+                  <IoIosArrowRoundForward />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <Footer />
     </div>
+    <Footer />
+  </div>
+  
   );
 };
 

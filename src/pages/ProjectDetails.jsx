@@ -156,10 +156,10 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="bg-[#ffffff] z-50">
+    <div className="z-50">
       <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3 relative">
-        <div className="bg-[#ffffff81] rounded-lg">
-          <div className="links flex items-center justify-between gap-5 fixed w-full left-0 right-0 bg-white py-5 max-md:py-3 px-20 max-md:px-2 z-50">
+        <div className="bg-[#F3F3F5] rounded-lg">
+          <div className="links flex items-center justify-between gap-5 fixed w-full left-0 right-0 bg-[#F3F3F5] py-5 max-md:py-3 px-20 max-md:px-2 z-50">
             <div className="flex items-center gap-3 ">
               <Magnetic>
                 <button
@@ -200,16 +200,16 @@ const ProjectDetails = () => {
           </div>
 
           <div className="fixed max-md:px-3 px-20 bottom-[20px] max-md:bottom-[15px]  right-0 z-50">
-          <a
-            href="/project"
-            className=" flex items-center gap-2 justify-end box-shadow-custom bg-[#88FE02] hover:bg-black transition-all duration-200 hover:text-white px-4 py-1 text-center text-[16px] max-md:text-[17px] font-medium rounded-md"
-          >
-            All Projects
-            <span className="text-[20px]">
-              <FiArrowUpRight />
-            </span>
-          </a>
-        </div>
+            <a
+              href="/project"
+              className=" flex items-center gap-2 justify-end box-shadow-custom bg-[#88FE02] hover:bg-black transition-all duration-200 hover:text-white px-4 py-1 text-center text-[16px] max-md:text-[17px] font-medium rounded-md"
+            >
+              All Projects
+              <span className="text-[20px]">
+                <FiArrowUpRight />
+              </span>
+            </a>
+          </div>
 
           <h1 className="text-8xl font-extrabold max-sm:text-4xl max-sm:mb-3 text-center pt-28">
             {project.title}
@@ -243,43 +243,6 @@ const ProjectDetails = () => {
                   alt={`Additional ${index + 1}`}
                   className="w-full h-64 max-sm:h-full object-cover rounded-md"
                 />
-              ))}
-            </div>
-          </div>
-          <div className="mb-8 mt-32">
-            <h3 className="text-6xl font-semibold mb-12 ">Related Projects:</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {relatedProjects.map((relatedProject) => (
-                <div
-                  key={relatedProject.id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
-                >
-                  <img
-                    src={relatedProject.mainImage}
-                    alt={relatedProject.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h2 className="text-xl font-semibold mb-2">
-                      {relatedProject.title}
-                    </h2>
-                    <p className="text-gray-600 mb-4">
-                      {relatedProject.description}
-                    </p>
-                    <ul className="list-disc list-inside text-gray-600 mb-4">
-                      {relatedProject.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
-
-                    <a
-                      href={`/project/${relatedProject.id}`}
-                      className="inline-block text-blue-500 hover:underline"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </div>
               ))}
             </div>
           </div>

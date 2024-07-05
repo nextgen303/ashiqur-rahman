@@ -1,78 +1,43 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ProjectCard = ({ project }) => {
   const cardRef = useRef(null);
-  const titleRef = useRef(null);
-  const titleTextRef = useRef(null);
-
-  useEffect(() => {
-    gsap.set(titleRef.current, { opacity: 0 });
-  }, []);
-
-  const handleMouseEnter = () => {
-    // Hide all other titles
-    gsap.to(".project-title", {
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.in",
-    });
-
-    // Hacker-style text reveal
-    const text = titleTextRef.current.textContent;
-    titleTextRef.current.textContent = ""; // Clear text
-
-    gsap.to(titleRef.current, { opacity: 1, duration: 0.3, ease: "power2.out" });
-
-    let revealChars = "";
-    const chars = text.split("");
-
-    chars.forEach((char, i) => {
-      setTimeout(() => {
-        revealChars += char;
-        titleTextRef.current.textContent = revealChars;
-      }, i * 50); // Adjust the typing speed here
-    });
-  };
-
-  const handleMouseLeave = () => {
-    gsap.to(titleRef.current, {
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.in",
-    });
-  };
 
   return (
-    <div
-      ref={cardRef}
-      className="relative border rounded-lg shadow-lg overflow-hidden transition-shadow p-2 mb-24"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-min object-cover rounded-md mb-4"
-      />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h2
-          ref={titleRef}
-          className="project-title text-6xl font-bold text-[#88FE02] opacity-0 transition-opacity"
-        >
-          <span ref={titleTextRef}>{project.title}</span>
-        </h2>
+    <div ref={cardRef}>
+      <div className="relative">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-min object-cover rounded-[24px] mb-4"
+        />
+
+        <div className="absolute flex items-start flex-wrap gap-2 gap-y-3 bottom-[1.4rem] left-5">
+          {project.languages.map((language, index) => (
+            <div
+              key={index}
+              className="bg-[#FFFFFF] text-black px-5 py-1 rounded-full"
+            >
+              {language}
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="relative p-4">
-        <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-        <p className="text-gray-600 mb-4">{project.description}</p>
-        <Link
-          to={`/project/${project.id}`}
-          className="text-blue-500 hover:underline"
-        >
-          View Details
-        </Link>
+
+      <div className="flex items-center justify-between pt-3">
+        <div>
+          <h2 className="text-[22px] font-medium">{project.title}</h2>
+          <p className="text-[18px] text-[#374151] font-light">
+            {project.description}
+          </p>
+        </div>
+        <div className="border border-[#030712] text-3xl text-gray-800 hover:bg-black hover:text-white transition-all duration-150 flex items-center px-4 rounded-full">
+          <a href={`/project/${project.id}`}>
+            <IoIosArrowRoundForward />
+          </a>
+        </div>
       </div>
     </div>
   );
