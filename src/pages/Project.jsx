@@ -146,9 +146,9 @@ export const projects = [
 const Project = () => {
   return (
     <div className="bg-[#F3F3F5] mb-[350px] px-0 pb-20 pt-10">
-    <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:px-3 mx-auto">
+    <div className="max-w-screen-2xl px-20 max-sm:px-3  mx-auto">
       <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-1">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-y-12">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -165,7 +165,7 @@ const Project = () => {
                   {project.languages.map((language, index) => (
                     <div
                       key={index}
-                      className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[14px]"
+                      className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[14px] max-sm:text-[10px]"
                     >
                       {language}
                     </div>
@@ -176,8 +176,8 @@ const Project = () => {
   
             <div className="flex items-center justify-between pt-3">
               <div>
-                <h2 className="text-[22px] font-medium">{project.title}</h2>
-                <p className="text-[18px] text-[#374151] font-light">
+                <h2 className="text-[22px] max-sm:text-[18px] font-medium">{project.title}</h2>
+                <p className="text-[18px]  max-sm:text-[15px] text-[#374151] font-light">
                   {project.description}
                 </p>
               </div>
