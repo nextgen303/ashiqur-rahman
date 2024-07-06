@@ -10,11 +10,11 @@ const HomeProject = () => {
   return (
     <div className="pb-44 bg-[#F3F3F5]">
       <div className="max-w-screen-2xl px-20 max-sm:px-5 mx-auto">
-        <div className="titles flex items-end justify-between max-md:flex-col pb-10">
+        <div className="titles flex items-start justify-between max-md:flex-col pb-10">
           <h1 className="text-[40px] font-medium">Selected works</h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-16 max-sm:gap-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-16">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -25,9 +25,9 @@ const HomeProject = () => {
             href="/project"
             className="w-full h-full text-[17px] flex items-center justify-center gap-2"
           >
-            See All Projects{" "}
+            See All Projects
             <span className="text-2xl">
-              {" "}
+              
               <IoIosArrowRoundForward />
             </span>
           </a>

@@ -147,7 +147,11 @@ const Project = () => {
   return (
     <div className="bg-[#F3F3F5] mb-[350px] px-0 pb-20 pt-10">
     <div className="max-w-screen-2xl px-20 max-sm:px-3  mx-auto">
-      <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
+      <div>
+      <h1 className="text-4xl font-bold text-center my-8 font-custom ">
+        Projects
+        </h1>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-y-12">
         {projects.map((project) => (
           <div
@@ -161,11 +165,11 @@ const Project = () => {
               />
   
               <div className="absolute bottom-0 left-0 right-0 px-5 py-3 bg-gradient-to-b from-transparent to-[#00000042] overflow-hidden rounded-[18px]">
-                <div className="flex items-start flex-wrap gap-2 gap-y-3">
+                <div className="flex items-start flex-wrap gap-2 gap-y-3 max-sm:hidden">
                   {project.languages.map((language, index) => (
                     <div
                       key={index}
-                      className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[14px] max-sm:text-[10px]"
+                      className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[16px] max-sm:text-[15px]"
                     >
                       {language}
                     </div>
