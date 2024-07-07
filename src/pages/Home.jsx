@@ -10,7 +10,7 @@ import HomeBlog from "../components/HomeBlog";
 import Testimonial from "../components/Testimonial";
 const Home = () => {
   return (
-    <main className="w-full h-full bg-white text-black mx-auto">
+    <main className="w-full h-full text-black mx-auto">
       <Hero />
       <HomeMarquee />
       <ShortDetails />

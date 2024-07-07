@@ -23,8 +23,8 @@ const Hero = () => {
             & <span className="text-stroke font-thin">Developer</span>
           </h1>
 
-          <p className="pt-0 pb-3 text-center text-[24px] max-lg:pt-4 max-lg:text-[20px">
-            I design beautifully simple things and i love what i do. <br />
+          <p className="pt-0 pb-3 text-center text-[24px] max-lg:pt-4 max-lg:text-[20px] w-[70%] max-md:w-full">
+            I design beautifully simple things and i love what i do.
             Just simple like that!
           </p>
 

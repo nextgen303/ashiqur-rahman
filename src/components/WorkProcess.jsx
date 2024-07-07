@@ -59,12 +59,8 @@ const WorkProcess = () => {
     <div className="work-process max-w-screen-2xl mx-auto px-20 max-sm:px-5 pb-36 pt-32  bg-[#F3F3F5]" ref={ref}>
       <div className="mx-auto max-w-screen-2xl">
         <div className="titles flex justify-between mb-20">
-          <h1 className="text-[4vw] w-1/3">Work Process</h1>
-          <p className="w-1/3 max-sm:w-full pt-36">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-            laboriosam a numquam, magni ipsam repellendus laborum minima dei ab
-            eius earum
-          </p>
+          <h1 className="text-4xl font-medium">Work Process</h1>
+         
         </div>
       </div>
 
@@ -98,7 +94,7 @@ const WorkProcess = () => {
         {workProcessData.map((item, index) => (
           <SwiperSlide key={index}>
             <motion.div
-              className="service__list-box text-black rounded-lg  p-6"
+              className="service__list-box text-black rounded-lg  p-6 max-md:p-0"
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: index * 0.2 }}

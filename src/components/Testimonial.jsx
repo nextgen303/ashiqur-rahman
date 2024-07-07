@@ -26,8 +26,8 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className="  bg-[#F3F3F5] pb-12">
-      <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto">
+    <div className=" bg-[#F3F3F5] -mb-16 pb-16 rounded-bl-3xl rounded-br-3xl">
+      <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-0  mx-auto">
         <div className="text-gray-600 pt-8" id="testimonials">
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="mb-10 space-y-4 px-6 md:px-0">

@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
   const cardRef = useRef(null);
 
   return (
-    <div ref={cardRef} className="group h-min p-3 rounded-lg">
+    <div ref={cardRef} className="group h-min p-3 max-md:p-0 rounded-lg">
     <div className="relative">
       <img
         src={project.image}
@@ -27,7 +27,7 @@ const ProjectCard = ({ project }) => {
       </div>
     </div>
   
-    <div className="flex items-center justify-between pt-3">
+    <div className="flex items-center justify-between pt-3 max-md:pt-0">
       <div>
         <h2 className="text-[22px] font-medium">{project.title}</h2>
         <p className="text-[18px] text-[#374151] font-light">

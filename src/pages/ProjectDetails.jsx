@@ -156,7 +156,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="z-50">
+    <div className="z-50 text-black bg-[#F3F3F5] pb-24">
       <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3 relative">
         <div className="bg-[#F3F3F5] rounded-lg">
           <div className="links flex items-center justify-between gap-5 fixed w-full left-0 right-0 bg-[#F3F3F5] py-5 max-md:py-3 px-20 max-md:px-2 z-50">

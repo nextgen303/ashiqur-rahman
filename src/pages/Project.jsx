@@ -145,10 +145,10 @@ export const projects = [
 
 const Project = () => {
   return (
-    <div className="bg-[#F3F3F5] mb-[350px] px-0 pb-20 pt-10">
+    <div className="bg-[#F3F3F5] text-black mb-[350px] px-0 pb-20 pt-10">
     <div className="max-w-screen-2xl px-20 max-sm:px-3  mx-auto">
       <div>
-      <h1 className="text-4xl font-bold text-center my-8 font-custom ">
+      <h1 className="text-[6vw] font-bold text-center my-8 font-custom ">
         Projects
         </h1>
       </div>
@@ -178,7 +178,7 @@ const Project = () => {
               </div>
             </div>
   
-            <div className="flex items-center justify-between pt-3">
+            <div className="flex items-center justify-between pt-3 max-md:pt-0">
               <div>
                 <h2 className="text-[22px] max-sm:text-[18px] font-medium">{project.title}</h2>
                 <p className="text-[18px]  max-sm:text-[15px] text-[#374151] font-light">

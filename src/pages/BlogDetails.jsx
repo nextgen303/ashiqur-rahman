@@ -56,9 +56,9 @@ const BlogDetails = () => {
   };
 
   return (
-    <div className="bg-[#ffffff] z-50 relative">
+    <div className="text-black bg-[#F3F3F5] z-50 relative pb-24">
       <div className="max-w-screen-2xl mx-auto px-20 max-md:px-3 relative">
-        <div className="mx-auto bg-white flex items-center justify-between fixed max-w-screen-2xl px-20 max-md:px-3 py-3 left-0 right-0 z-50">
+        <div className="mx-auto bg-[#F3F3F5] flex items-center justify-between fixed max-w-screen-2xl px-20 max-md:px-3 py-3 left-0 right-0 z-50">
           <div className="flex items-center gap-3 ">
             <Magnetic>
               <button
