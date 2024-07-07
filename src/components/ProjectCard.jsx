@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
         className="w-full h-min object-cover rounded-[24px] mb-4"
       />
   
-      <div className="absolute bottom-0 left-0 right-0 px-5 py-3 bg-gradient-to-b from-transparent to-[#00000042] overflow-hidden rounded-[18px]">
+      <div className="absolute bottom-0 left-0 right-0 px-5 py-3  max-sm:bg-none bg-gradient-to-b from-transparent to-[#00000042] overflow-hidden rounded-[18px]">
         <div className="flex items-start flex-wrap gap-2 gap-y-3 max-sm:hidden">
           {project.languages.map((language, index) => (
             <div
