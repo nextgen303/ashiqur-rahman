@@ -145,11 +145,11 @@ export const projects = [
 
 const Project = () => {
   return (
-    <div className="bg-[#F3F3F5] text-black mb-[350px] px-0 pb-20 pt-10">
+    <div className="bg-[#F3F3F5] text-black mb-[350px] px-0 pb-20 pt-10 -mt-8 ">
     <div className="max-w-screen-2xl px-20 max-sm:px-3  mx-auto">
       <div>
-      <h1 className="text-[6vw] font-bold text-center my-8 font-custom ">
-        Projects
+      <h1 className="text-[100px] leading-[105px] font-bold my-8 pt-28 pb-12 max-lg:text-center max-lg:pt-5 max-lg:text-[74px] max-lg:leading-[84px] max-md:!text-[44px] max-md:!leading-[54px] max-md:pt-0">
+          Explore our <br /> Leatest Projects
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-y-12">
