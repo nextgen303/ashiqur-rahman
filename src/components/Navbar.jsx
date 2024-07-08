@@ -36,7 +36,7 @@ const Navbar = () => {
           </Magnetic>
           <Magnetic>
             <li className="hover:text-[#202020af]">
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog">Blogs</Link>
             </li>
           </Magnetic>
         </ul>

@@ -159,9 +159,9 @@ export const blogs = [
 const Blog = () => {
   return (
     <div className="text-black bg-[#F3F3F5] h-full py-12 pb-20">
-      <div className="mx-auto px-4 max-w-7xl">
-      <h1 className="text-[6vw] font-bold text-center my-8 font-custom ">
-        Leatest Blogs
+      <div className="mx-auto max-w-screen-2xl px-20 max-md:px-3">
+      <h1 className="text-[100px] leading-[105px] font-bold my-8 pt-28 pb-12 max-lg:text-center max-lg:pt-5 max-lg:text-[74px] max-lg:leading-[84px] max-md:!text-[44px] max-md:!leading-[54px] max-md:pt-0">
+      Browse our blogs <br /> for leatest updates.
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (

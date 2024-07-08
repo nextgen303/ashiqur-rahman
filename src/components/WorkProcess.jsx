@@ -2,13 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./WorkProcess.css";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-
 import { Autoplay, Navigation } from 'swiper/modules';
 
 

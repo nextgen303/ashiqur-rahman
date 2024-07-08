@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export const projects = [
   {
@@ -144,60 +145,97 @@ export const projects = [
 ];
 
 const Project = () => {
+  const [inView, setInView] = useState({});
+  const containerRef = useRef([]);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1, // Adjust the threshold as needed
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setInView((prev) => ({
+            ...prev,
+            [entry.target.dataset.index]: true,
+          }));
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    containerRef.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      containerRef.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
   return (
-    <div className="bg-[#F3F3F5] text-black mb-[350px] px-0 pb-20 pt-10 -mt-8 ">
-    <div className="max-w-screen-2xl px-20 max-sm:px-3  mx-auto">
-      <div>
-      <h1 className="text-[100px] leading-[105px] font-bold my-8 pt-28 pb-12 max-lg:text-center max-lg:pt-5 max-lg:text-[74px] max-lg:leading-[84px] max-md:!text-[44px] max-md:!leading-[54px] max-md:pt-0">
-          Explore our <br /> Leatest Projects
-        </h1>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-y-12">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-          >
-            <div className="relative">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-min object-cover rounded-[24px] mb-4 duration-300"
-              />
-  
-              <div className="absolute bottom-0 left-0 right-0 px-5 py-3 max-sm:bg-none bg-gradient-to-b from-transparent to-[#00000042] overflow-hidden rounded-[18px]">
-                <div className="flex items-start flex-wrap gap-2 gap-y-3 max-sm:hidden ">
-                  {project.languages.map((language, index) => (
-                    <div
-                      key={index}
-                      className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[16px] max-sm:text-[15px]"
-                    >
-                      {language}
-                    </div>
-                  ))}
+    <div className="bg-[#F3F3F5] text-black mb-[350px] px-0 pb-20 pt-10 -mt-8 rounded-bl-3xl rounded-br-3xl">
+      <div className="max-w-screen-2xl px-20 max-sm:px-3 mx-auto">
+        <div>
+          <h1 className="text-[100px] leading-[105px] font-bold my-8 pt-28 pb-12 max-lg:text-center max-lg:pt-5 max-lg:text-[74px] max-lg:leading-[84px] max-md:!text-[44px] max-md:!leading-[54px] max-md:pt-0">
+            Explore our <br /> Latest Projects
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 gap-y-24 max-sm:gap-y-12">
+          {projects.map((project, index) => (
+              <motion.div
+              key={project.id}
+              className=" text-black rounded-lg p-6 max-md:p-0"
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView[index] ? { opacity: 1, y: 0.6 } : {}}
+              transition={{ duration: 1, delay: index * 0.1 }}
+              data-index={index}
+              ref={(el) => (containerRef.current[index] = el)}
+            >
+              <div className="relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-min object-cover rounded-[24px] mb-4 duration-300"
+                />
+                <div className="absolute bottom-0 left-0 right-0 px-5 py-3 max-sm:bg-none bg-gradient-to-b from-transparent to-[#00000042] overflow-hidden rounded-[18px]">
+                  <div className="flex items-start flex-wrap gap-2 gap-y-3 max-sm:hidden">
+                    {project.languages.map((language, index) => (
+                      <div
+                        key={index}
+                        className="bg-[#ffffff] backdrop-filter backdrop-blur-[30px] text-black px-5 py-1 rounded-full text-[16px] max-sm:text-[15px]"
+                      >
+                        {language}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-  
-            <div className="flex items-center justify-between pt-3 max-md:pt-0">
-              <div>
-                <h2 className="text-[22px] max-sm:text-[18px] font-medium">{project.title}</h2>
-                <p className="text-[18px]  max-sm:text-[15px] text-[#374151] font-light">
-                  {project.description}
-                </p>
+              <div className="flex items-center justify-between pt-3 max-md:pt-0">
+                <div>
+                  <h2 className="text-[22px] max-sm:text-[18px] font-medium">
+                    {project.title}
+                  </h2>
+                  <p className="text-[18px] max-sm:text-[15px] text-[#374151] font-light">
+                    {project.description}
+                  </p>
+                </div>
+                <div className="border border-[#030712] text-3xl text-gray-800 hover:bg-black hover:text-white transition-all duration-150 flex items-center px-4 rounded-full">
+                  <a href={`/project/${project.id}`}>
+                    <IoIosArrowRoundForward />
+                  </a>
+                </div>
               </div>
-              <div className="border border-[#030712] text-3xl text-gray-800 hover:bg-black hover:text-white transition-all duration-150 flex items-center px-4 rounded-full">
-                <a href={`/project/${project.id}`}>
-                  <IoIosArrowRoundForward />
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-  
   );
 };
 
