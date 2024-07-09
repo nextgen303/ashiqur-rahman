@@ -68,14 +68,7 @@ const BlogDetails = () => {
                 <MdOutlineArrowBackIosNew />
               </button>
             </Magnetic>
-            <Magnetic>
-              <a
-                className="text-xl flex items-center gap-1 bg-black/10 text-black px-5 py-1 rounded-full hover:bg-[#9DA0A3] duration-150"
-                href="/"
-              >
-                <HiOutlineHome /> <span className="text-[16px]">Home</span>
-              </a>
-            </Magnetic>
+            
           </div>
 
           <div className="link">

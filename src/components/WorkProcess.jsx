@@ -52,7 +52,7 @@ const WorkProcess = () => {
 
   return (
     <div className=" bg-[#F3F3F5]">
-      <div className="work-process max-w-screen-2xl mx-auto px-20 max-sm:px-5 pb-36 pt-32 " ref={ref}>
+      <div className="work-process max-w-screen-2xl mx-auto px-20 max-sm:px-3 pb-36 pt-32 " ref={ref}>
       <div className="mx-auto max-w-screen-2xl">
         <div className="titles flex justify-between mb-20">
           <h1 className="text-4xl font-medium">Work Process</h1>

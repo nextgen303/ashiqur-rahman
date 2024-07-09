@@ -9,7 +9,7 @@ const HomeProject = () => {
 
   return (
     <div className="pb-44 max-md:pb-12 bg-[#F3F3F5]">
-      <div className="max-w-screen-2xl px-20 max-sm:px-5 mx-auto">
+      <div className="max-w-screen-2xl px-20 max-sm:px-3 mx-auto">
         <div className="titles flex items-start justify-between max-md:flex-col pb-10">
           <h1 className="text-[40px] font-medium">Selected works</h1>
         </div>
