@@ -43,11 +43,6 @@ body {
 }
 
 .transition-image {
-  transition: opacity 0.9s ease-in-out;
-  opacity: 1;
-}
-
-.change-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
