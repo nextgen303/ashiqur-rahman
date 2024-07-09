@@ -1,6 +1,4 @@
 import React from "react";
-import { GoArrowRight } from "react-icons/go";
-import Magnetic from "../components/MagnetEffect";
 
 const Hero = () => {
   return (
@@ -8,35 +6,26 @@ const Hero = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.4"
-      className="pb-16 pt-12 flex flex-col gap-12 w-full -mt-12 -z-10 bg-[#F3F3F5]"
+      className="pb-16 pt-24 gap-12 w-full -mt-24 -z-10 bg-[#F3F3F5]"
     >
-      <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto overflow-hidden">
-        <div className="main flex flex-col items-center justify-center gap-4 pt-20 relative pb-4">
-          <h4 className="text-[18px] pb-12 max-lg:pb-0">Hi! There, i’m AshıQur Rahman, </h4>
-
-          <h1 className="font-custom font-black text-[120px] leading-3 max-lg:text-[88px] max-lg:leading-none text-center max-sm:!text-[54px]">
-            Web Designer
+      <div className="max-w-screen-2xl px-20 max-xl:px-10 max-sm:!px-3 mx-auto ">
+        <div className="flex flex-col pt-12">
+          <div className="magnetic-effect flex flex-col items-end gap-2 text-xl rotate-6">
+            <h2 className="bg-black text-white px-5 rounded-md py-1">Web Design</h2>
+            <h2 className="bg-black text-white px-5 rounded-md py-1">Web Development</h2>
+            <h2 className="bg-black text-white px-5 rounded-md py-1">Website Speed Optimization</h2>
+          </div>
+        
+          <div className="pt-12 flex max-xl:flex-col gap-10 max-md:gap-3">
+          <h1 className="font-black pb-4 text-[80px] leading-[80px] max-lg:leading-none max-sm:!text-[44px]">
+            Innovte. <br /> Differentiate. <br /> Grow.
           </h1>
-          <h1 className="text-[120px]  max-lg:leading-none  text-center max-lg:text-[88px] font-black font-custom max-sm:!text-[54px]">
-            & <span className="text-stroke font-thin">Developer</span>
-          </h1>
 
-          <p className="pt-0 pb-3 text-center text-[24px] max-lg:pt-4 max-lg:text-[20px] w-[70%] max-md:w-full">
-            I design beautifully simple things and i love what i do.
-            Just simple like that!
-          </p>
-
-          <Magnetic>
-            <a
-              href=""
-              className="bg-[#000000f5] box-shadow-custom text-white w-[140px] px-6 py-2 rounded-full  flex items-center justify-between"
-            >
-              Let’s Talk
-              <span className="mt-[2px]">
-                <GoArrowRight />
-              </span>
-            </a>
-          </Magnetic>
+          <div className="h-[400px] max-md:h-full w-full object-cover rounded-2xl overflow-hidden">
+            <img src="https://images.pexels.com/photos/6804581/pexels-photo-6804581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+          </div>
+          </div>
+  
         </div>
       </div>
     </div>

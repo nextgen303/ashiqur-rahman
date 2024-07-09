@@ -7,14 +7,14 @@ const HomeMarquee = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.01"
-      className="w-full py-10 -mt-6 pb-28 md:pt-10 bg-[#000] rounded-tl-3xl rounded-tr-3xl text-white"
+      className="w-full py-10 -mt-6 pb-32 pt-20 max-md:pt-10 bg-[#000] rounded-tl-3xl rounded-tr-3xl text-white"
     >
       <div className="text flex whitespace-nowrap overflow-hidden">
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-          className='text-[16vw] leading-none font-["Founders Grotesk X-condensed"]  font-bold pr-10'
+          className='text-[12vw] leading-none font-["Founders Grotesk X-condensed"]  font-bold pr-10'
         >
           WEB DESIGN WEB DEVELOEPMENT SPEED OPTIMIZATION
         </motion.h1>
@@ -23,7 +23,7 @@ const HomeMarquee = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-          className='text-[16vw] leading-none font-["Founders Grotesk X-condensed"]  font-bold'
+          className='text-[12vw] leading-none font-["Founders Grotesk X-condensed"]  font-bold'
         >
           WEB DESIGN WEB DEVELOEPMENT SPEED OPTIMIZATION
         </motion.h1>

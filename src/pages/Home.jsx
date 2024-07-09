@@ -15,10 +15,8 @@ const Home = () => {
       <HomeMarquee />
       <ShortDetails />
       <WorkProcess />
-
       <HomeProject />
       <Projects />
-
       <HomeBlog />
       <Testimonial />
 

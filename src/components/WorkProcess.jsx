@@ -51,7 +51,8 @@ const WorkProcess = () => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
-    <div className="work-process max-w-screen-2xl mx-auto px-20 max-sm:px-5 pb-36 pt-32  bg-[#F3F3F5]" ref={ref}>
+    <div className=" bg-[#F3F3F5]">
+      <div className="work-process max-w-screen-2xl mx-auto px-20 max-sm:px-5 pb-36 pt-32 " ref={ref}>
       <div className="mx-auto max-w-screen-2xl">
         <div className="titles flex justify-between mb-20">
           <h1 className="text-4xl font-medium">Work Process</h1>
@@ -101,6 +102,7 @@ const WorkProcess = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+    </div>
     </div>
   );
 };

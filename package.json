@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/three": "^0.166.0",
+    "express": "^4.19.2",
     "fast-average-color": "^9.4.0",
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^5.0.0-beta.13",
+    "mongoose": "^8.4.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,7 +27,8 @@
     "react-slick": "^0.30.2",
     "sass": "^1.77.5",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.4",
+    "three": "^0.166.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
