@@ -58,7 +58,7 @@ const Hero = () => {
             ))}
           </div>
 
-          <div className="pt-24 flex max-xl:flex-col gap-10 max-md:gap-3">
+          <div className="pt-14 flex max-xl:flex-col gap-10 max-md:gap-3">
             <h1 className="font-black pb-4 text-[80px] leading-[80px] max-lg:leading-none max-sm:!text-[44px]">
               Innovate. <br /> Differentiate. <br /> Grow.
             </h1>

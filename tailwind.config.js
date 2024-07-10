@@ -11,7 +11,7 @@ export default {
         "max-2xl": { max: "1536px" },
       },
       fontFamily: {
-        custom: ['AquireBold', 'sans-serif'],
+        custom: ['GroteskBold', 'sans-serif'],
       },
       boxShadow: {
         custom: '0 4px 10px rgba(0, 0, 0, 0.25)',

@@ -11,12 +11,13 @@
 }
 
 .service__list-box .number {
+  padding-bottom: 1rem;
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
 }
 
 .service__list-box h4 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   display: flex;
   -ms-flex-direction: column;
@@ -26,7 +27,7 @@
 }
 
 .service__list-box p {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   padding-top: 50px;
   width: 100%;
@@ -35,11 +36,14 @@
 .service__list-box:hover .number {
   opacity: 0;
   transform: translateY(-40px);
+  padding-bottom: 1rem;
 }
 
 .service__list-box:hover h4 {
   transform: translateY(-40px);
   color: #121212af;
+
+
 }
 
 .service__list-box p {

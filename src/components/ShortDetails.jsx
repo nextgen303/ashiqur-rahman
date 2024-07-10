@@ -37,7 +37,7 @@ const ShortDetails = () => {
         </h1>
 
         <div className="w-full flex max-sm:flex-col gap-5 border-t mt-2 pt-10 border-[#0000005b]">
-          <div className="w-[80%] max-sm:w-ful">
+          <div className="w-[60%] max-sm:w-ful">
             <h1 className="text-[4vw]">Hey there,</h1>
             <Button label="About Me" href="/about" className="custom-class" />
           </div>
@@ -49,7 +49,7 @@ const ShortDetails = () => {
             viewport={{
               once: true,
             }}
-            className="w-[20%] max-sm:w-[100%] h-[480px] max-sm:h-[230px] rounded-2xl overflow-hidden"
+            className="w-[40%] max-sm:w-[100%] h-[480px] max-sm:h-[440px] rounded-2xl overflow-hidden"
           >
             <img
               className="w-full h-full object-cover"
