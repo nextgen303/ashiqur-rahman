@@ -26,7 +26,7 @@ const ShortDetails = () => {
       className="py-10 px-20 max-sm:px-3 z-50 rounded-tl-3xl rounded-tr-3xl bg-[#F3F3F5]"
     >
       <div className="max-w-screen-2xl mx-auto">
-        <h1 className=' group transition-all duration-600 ease-in-out text-black  text-4xl max-md:text-xl leading-[50px] py-20 max-md:py-8'>
+        <h1 className=' group transition-all duration-600 ease-in-out text-black  text-4xl max-md:text-2xl leading-[50px] py-20 max-md:py-8'>
           <span className="bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             As a web developer, I specialize in delivering high-quality,
             professional websites tailored to meet the unique needs of each

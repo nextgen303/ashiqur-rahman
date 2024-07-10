@@ -8,7 +8,7 @@ const HomeMarquee = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.01"
-      className="w-full py-10 -mt-6 pb-32 pt-20 bg-[#000] rounded-tl-3xl rounded-tr-3xl text-white"
+      className="w-full py-10 -mt-6 pb-32 pt-20 max-sm:pt-12 max-sm:pb-24 bg-[#000] rounded-tl-3xl rounded-tr-3xl text-white"
     >
       <div className="text flex whitespace-nowrap overflow-hidden">
         <motion.h1
