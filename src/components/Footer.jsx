@@ -70,7 +70,9 @@ const Footer = () => {
             </Magnetic>
           </div>
         </div>
+       </div>
 
+        <div className="max-sm:flex max-sm:justify-between flex gap-16 max-sm:gap-2 max-sm:pt-5">
         <div className="two max-sm:hidden">
           <h1 className="text-xl">Quick Links</h1>
           <div className="flex flex-col gap-2 pt-5">
@@ -88,9 +90,6 @@ const Footer = () => {
             </Magnetic>
           </div>
         </div>
-       </div>
-
-        <div className="max-sm:flex max-sm:justify-between flex gap-16 max-sm:gap-2 max-sm:pt-5">
         <div className="three">
           <h1 className="text-xl">Resources</h1>
           <div className="flex flex-col gap-2 pt-5">

@@ -14,7 +14,7 @@ const HomeMarquee = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-          className='text-[12vw] leading-none font-["Founders Grotesk X-condensed"]  font-bold pr-10'
+          className='text-[196px] max-lg:text-[120px] max-md:!text-[86px]  font-custom  leading-none font-["Founders Grotesk X-condensed"]  font-bold pr-10'
         >
           WEB DESIGN WEB DEVELOEPMENT SPEED OPTIMIZATION
         </motion.h1>
@@ -23,7 +23,7 @@ const HomeMarquee = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-          className='text-[12vw] leading-none font-["Founders Grotesk X-condensed"]  font-bold'
+          className='text-[196px] max-lg:text-[120px] max-md:!text-[86px] font-custom leading-none font-["Founders Grotesk X-condensed"]  font-bold'
         >
           WEB DESIGN WEB DEVELOEPMENT SPEED OPTIMIZATION
         </motion.h1>
